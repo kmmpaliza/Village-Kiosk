@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Village Kiosk", "Village Kiosk\Village Kiosk.csproj", "{DECB7623-E836-4BE9-836F-C8B9DE1976D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillageClass", "VillageClass\VillageClass.csproj", "{CF4A5822-6941-4877-9A6F-17E96E996F34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DECB7623-E836-4BE9-836F-C8B9DE1976D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECB7623-E836-4BE9-836F-C8B9DE1976D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECB7623-E836-4BE9-836F-C8B9DE1976D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECB7623-E836-4BE9-836F-C8B9DE1976D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4A5822-6941-4877-9A6F-17E96E996F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4A5822-6941-4877-9A6F-17E96E996F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4A5822-6941-4877-9A6F-17E96E996F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4A5822-6941-4877-9A6F-17E96E996F34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

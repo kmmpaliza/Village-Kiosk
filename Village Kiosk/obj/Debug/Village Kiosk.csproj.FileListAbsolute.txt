@@ -1,0 +1,53 @@
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\Village Kiosk.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\Village Kiosk.pdb
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\obj\Debug\Village Kiosk.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\obj\Debug\Village Kiosk.pdb
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\Village Kiosk.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\Village Kiosk.pdb
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\obj\Debug\Village Kiosk.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\obj\Debug\Village Kiosk.pdb
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\VillageClass.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\VillageClass.pdb
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\obj\Debug\Village Kiosk.csprojResolveAssemblyReference.cache
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\VillageClass.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\VillageClass.pdb
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\obj\Debug\Village Kiosk.csprojResolveAssemblyReference.cache
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\JWT.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\Newtonsoft.Json.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\Twilio.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\Newtonsoft.Json.xml
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\Village Kiosk\bin\Twilio.xml
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\JWT.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\Newtonsoft.Json.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\Twilio.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\Newtonsoft.Json.xml
+C:\Users\chaelamorin\Topic3\Village Kiosk\Village Kiosk\bin\Twilio.xml
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\Village Kiosk.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\Village Kiosk.pdb
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\JWT.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\Newtonsoft.Json.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\Twilio.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\VillageClass.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\VillageClass.pdb
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\Newtonsoft.Json.xml
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\Twilio.xml
+D:\MC\Programs\ASP\backup2\Village Kiosk\obj\Debug\Village Kiosk.csprojResolveAssemblyReference.cache
+D:\MC\Programs\ASP\backup2\Village Kiosk\obj\Debug\Village Kiosk.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\obj\Debug\Village Kiosk.pdb
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\AjaxControlToolkit.pdb
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\ar\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\cs\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\de\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\es\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\fr\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\he\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\hi\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\it\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\ja\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\ko\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\nl\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\pt\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\ru\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\tr-TR\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\zh-CHS\AjaxControlToolkit.resources.dll
+D:\MC\Programs\ASP\backup2\Village Kiosk\bin\zh-CHT\AjaxControlToolkit.resources.dll

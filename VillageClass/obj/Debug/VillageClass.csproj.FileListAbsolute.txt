@@ -1,0 +1,15 @@
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\VillageClass\bin\Debug\VillageClass.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\VillageClass\bin\Debug\VillageClass.pdb
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\VillageClass\obj\Debug\VillageClass.dll
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\VillageClass\obj\Debug\VillageClass.pdb
+D:\MC\Programs\ASP\Thesis3\Village Kiosk\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
+C:\Users\chaelamorin\Topic3\Village Kiosk\VillageClass\bin\Debug\VillageClass.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\VillageClass\bin\Debug\VillageClass.pdb
+C:\Users\chaelamorin\Topic3\Village Kiosk\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
+C:\Users\chaelamorin\Topic3\Village Kiosk\VillageClass\obj\Debug\VillageClass.dll
+C:\Users\chaelamorin\Topic3\Village Kiosk\VillageClass\obj\Debug\VillageClass.pdb
+D:\MC\Programs\ASP\backup2\VillageClass\bin\Debug\VillageClass.dll
+D:\MC\Programs\ASP\backup2\VillageClass\bin\Debug\VillageClass.pdb
+D:\MC\Programs\ASP\backup2\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
+D:\MC\Programs\ASP\backup2\VillageClass\obj\Debug\VillageClass.dll
+D:\MC\Programs\ASP\backup2\VillageClass\obj\Debug\VillageClass.pdb

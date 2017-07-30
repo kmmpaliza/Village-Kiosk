@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DECB7623-E836-4BE9-836F-C8B9DE1976D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Village_Kiosk</RootNamespace>
+    <AssemblyName>Village Kiosk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="JWT, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.1.3.4\lib\3.5\JWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Twilio, Version=5.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.5.2\lib\net35\Twilio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\VillageDB.mdf" />
+    <Content Include="App_Data\VillageDB_log.ldf">
+      <DependentUpon>VillageDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Bootstrap\css\bootstrap-rtl.css" />
+    <Content Include="Bootstrap\css\bootstrap-rtl.min.css" />
+    <Content Include="Bootstrap\css\bootstrap.css" />
+    <Content Include="Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\css\plugins\morris.css" />
+    <Content Include="Bootstrap\css\sb-admin-rtl.css" />
+    <Content Include="Bootstrap\css\sb-admin.css" />
+    <Content Include="Bootstrap\font-awesome\css\font-awesome.css" />
+    <Content Include="Bootstrap\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Bootstrap\js\bootstrap.js" />
+    <Content Include="Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\js\jquery.js" />
+    <Content Include="Bootstrap\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot\flot-data.js" />
+    <Content Include="Bootstrap\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Bootstrap\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Bootstrap\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Bootstrap\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Bootstrap\js\plugins\morris\morris-data.js" />
+    <Content Include="Bootstrap\js\plugins\morris\morris.js" />
+    <Content Include="Bootstrap\js\plugins\morris\morris.min.js" />
+    <Content Include="Bootstrap\js\plugins\morris\raphael.min.js" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\searchicon.png" />
+    <Content Include="Images\arrow.png" />
+    <Content Include="Themes\css\Customcss.css" />
+    <Content Include="Themes\css\grayscale.css" />
+    <Content Include="Themes\css\grayscale.min.css" />
+    <Content Include="Themes\img\1.jpg" />
+    <Content Include="Themes\img\2.jpg" />
+    <Content Include="Themes\img\3.jpg" />
+    <Content Include="Themes\img\btnG.png" />
+    <Content Include="Themes\img\btnGuests.png" />
+    <Content Include="Themes\img\btnHO.png" />
+    <Content Include="Themes\img\btnHome.png" />
+    <Content Include="Themes\img\btnMessage.png" />
+    <Content Include="Themes\img\btnMG.png" />
+    <Content Include="Themes\img\downloads-bg.jpg" />
+    <Content Include="Themes\img\hm.png" />
+    <Content Include="Themes\img\homee.png" />
+    <Content Include="Themes\img\intro-bg.jpg" />
+    <Content Include="Themes\img\map-marker.png" />
+    <Content Include="Themes\img\searchicon.png" />
+    <Content Include="Themes\js\CustomJs.js" />
+    <Content Include="Themes\js\grayscale.js" />
+    <Content Include="Themes\js\grayscale.min.js" />
+    <Content Include="Themes\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Themes\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Themes\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Themes\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Themes\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Themes\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Themes\vendor\jquery\jquery.js" />
+    <Content Include="Themes\vendor\jquery\jquery.min.js" />
+    <Content Include="View\AdminDashboard.aspx" />
+    <Content Include="View\EditGuest.aspx" />
+    <Content Include="View\EditHomeOwners.aspx" />
+    <Content Include="View\Guest.aspx" />
+    <Content Include="View\HomeOwners.aspx" />
+    <Content Include="View\Login.aspx" />
+    <Content Include="View\Logs.aspx" />
+    <Content Include="View\MessageAll.aspx" />
+    <Content Include="View\MessageBoard.aspx" />
+    <Content Include="View\OptionsGuest.aspx" />
+    <Content Include="View\OptionsHomeOwner.aspx" />
+    <Content Include="View\OptionsMessage.aspx" />
+    <Content Include="View\Search.aspx" />
+    <Content Include="View\SearchGuest.aspx" />
+    <Content Include="View\SearchHO.aspx" />
+    <Content Include="View\SentItems.aspx" />
+    <Content Include="View\TodaysVisitorList.aspx" />
+    <Content Include="View\Visitor.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Master\LoginMaster.Master.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\LoginMaster.Master.designer.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\VillageMaster.Master.cs">
+      <DependentUpon>VillageMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\VillageMaster.Master.designer.cs">
+      <DependentUpon>VillageMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditGuest.aspx.cs">
+      <DependentUpon>EditGuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditGuest.aspx.designer.cs">
+      <DependentUpon>EditGuest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditHomeOwners.aspx.cs">
+      <DependentUpon>EditHomeOwners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditHomeOwners.aspx.designer.cs">
+      <DependentUpon>EditHomeOwners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Guest.aspx.cs">
+      <DependentUpon>Guest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Guest.aspx.designer.cs">
+      <DependentUpon>Guest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomeOwners.aspx.cs">
+      <DependentUpon>HomeOwners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\HomeOwners.aspx.designer.cs">
+      <DependentUpon>HomeOwners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Logs.aspx.cs">
+      <DependentUpon>Logs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Logs.aspx.designer.cs">
+      <DependentUpon>Logs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageAll.aspx.cs">
+      <DependentUpon>MessageAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MessageAll.aspx.designer.cs">
+      <DependentUpon>MessageAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageBoard.aspx.cs">
+      <DependentUpon>MessageBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MessageBoard.aspx.designer.cs">
+      <DependentUpon>MessageBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\OptionsGuest.aspx.cs">
+      <DependentUpon>OptionsGuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\OptionsGuest.aspx.designer.cs">
+      <DependentUpon>OptionsGuest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\OptionsHomeOwner.aspx.cs">
+      <DependentUpon>OptionsHomeOwner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\OptionsHomeOwner.aspx.designer.cs">
+      <DependentUpon>OptionsHomeOwner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\OptionsMessage.aspx.cs">
+      <DependentUpon>OptionsMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\OptionsMessage.aspx.designer.cs">
+      <DependentUpon>OptionsMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchGuest.aspx.cs">
+      <DependentUpon>SearchGuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SearchGuest.aspx.designer.cs">
+      <DependentUpon>SearchGuest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchHO.aspx.cs">
+      <DependentUpon>SearchHO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SearchHO.aspx.designer.cs">
+      <DependentUpon>SearchHO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SentItems.aspx.cs">
+      <DependentUpon>SentItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SentItems.aspx.designer.cs">
+      <DependentUpon>SentItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\TodaysVisitorList.aspx.cs">
+      <DependentUpon>TodaysVisitorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\TodaysVisitorList.aspx.designer.cs">
+      <DependentUpon>TodaysVisitorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Visitor.aspx.cs">
+      <DependentUpon>Visitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Visitor.aspx.designer.cs">
+      <DependentUpon>Visitor.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\VillageMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\LoginMaster.Master" />
+    <Content Include="packages.config" />
+    <None Include="Bootstrap\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Bootstrap\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="Bootstrap\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Bootstrap\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Bootstrap\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="Bootstrap\font-awesome\less\bordered-pulled.less" />
+    <None Include="Bootstrap\font-awesome\less\core.less" />
+    <None Include="Bootstrap\font-awesome\less\fixed-width.less" />
+    <None Include="Bootstrap\font-awesome\less\font-awesome.less" />
+    <None Include="Bootstrap\font-awesome\less\icons.less" />
+    <None Include="Bootstrap\font-awesome\less\larger.less" />
+    <None Include="Bootstrap\font-awesome\less\list.less" />
+    <None Include="Bootstrap\font-awesome\less\mixins.less" />
+    <None Include="Bootstrap\font-awesome\less\path.less" />
+    <None Include="Bootstrap\font-awesome\less\rotated-flipped.less" />
+    <None Include="Bootstrap\font-awesome\less\spinning.less" />
+    <None Include="Bootstrap\font-awesome\less\stacked.less" />
+    <None Include="Bootstrap\font-awesome\less\variables.less" />
+    <None Include="Bootstrap\font-awesome\scss\font-awesome.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_core.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_fixed-width.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_icons.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_larger.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_list.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_mixins.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_path.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_spinning.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_stacked.scss" />
+    <None Include="Bootstrap\font-awesome\scss\_variables.scss" />
+    <None Include="Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Themes\less\grayscale.less" />
+    <None Include="Themes\less\mixins.less" />
+    <None Include="Themes\less\variables.less" />
+    <None Include="Themes\sass\grayscale.scss" />
+    <None Include="Themes\sass\_mixins.scss" />
+    <None Include="Themes\sass\_variables.scss" />
+    <None Include="Themes\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Themes\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="Themes\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Themes\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Themes\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Themes\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Themes\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="Themes\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Themes\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Themes\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="Themes\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="Themes\vendor\font-awesome\less\animated.less" />
+    <None Include="Themes\vendor\font-awesome\less\bordered-pulled.less" />
+    <None Include="Themes\vendor\font-awesome\less\core.less" />
+    <None Include="Themes\vendor\font-awesome\less\fixed-width.less" />
+    <None Include="Themes\vendor\font-awesome\less\font-awesome.less" />
+    <None Include="Themes\vendor\font-awesome\less\icons.less" />
+    <None Include="Themes\vendor\font-awesome\less\larger.less" />
+    <None Include="Themes\vendor\font-awesome\less\list.less" />
+    <None Include="Themes\vendor\font-awesome\less\mixins.less" />
+    <None Include="Themes\vendor\font-awesome\less\path.less" />
+    <None Include="Themes\vendor\font-awesome\less\rotated-flipped.less" />
+    <None Include="Themes\vendor\font-awesome\less\screen-reader.less" />
+    <None Include="Themes\vendor\font-awesome\less\stacked.less" />
+    <None Include="Themes\vendor\font-awesome\less\variables.less" />
+    <None Include="Themes\vendor\font-awesome\scss\font-awesome.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_animated.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_core.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_fixed-width.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_icons.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_larger.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_list.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_mixins.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_path.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_screen-reader.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_stacked.scss" />
+    <None Include="Themes\vendor\font-awesome\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VillageClass\VillageClass.csproj">
+      <Project>{CF4A5822-6941-4877-9A6F-17E96E996F34}</Project>
+      <Name>VillageClass</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50327</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
