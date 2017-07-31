@@ -12,21 +12,12 @@ namespace Village_Kiosk.View
 {
     public partial class EditGuest : System.Web.UI.Page
     {
-        string guestname, psv, guestcontact, alertmsg;
+        string guestname, muni, guestcontact, alertmsg, address;
         VillageKioskClass guest = new VillageKioskClass();
         DataSet ds = new DataSet();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!IsPostBack)
-            {
-
-                drpPSV.DataSource = guest.getPersonToVisitInfo().Tables["guestHomeOwner"];
-                drpPSV.DataTextField = "HomeOwnerName";
-                drpPSV.DataBind();
-
-            }
 
              if (Request.QueryString["id"] != null && IsPostBack == false)
             {
@@ -35,9 +26,11 @@ namespace Village_Kiosk.View
 
                 guestForId.Text = id;
                 txtGuestName.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][2].ToString();
-                drpPSV.SelectedValue = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][3].ToString();
-                txtGuestMobile.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][4].ToString();
-                fPhoto.Attributes["File Name"] = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][5].ToString();
+                txtGuestMobile.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][3].ToString();
+                txtHouseNo.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][4].ToString();
+                txtBarangay.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][5].ToString();
+                drpMun.SelectedValue = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][6].ToString();
+                fPhoto.Attributes["File Name"] = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][7].ToString();
 
                 btnUpdateG.Enabled = true;
             }  
@@ -64,18 +57,18 @@ namespace Village_Kiosk.View
                     string gid = guestForId.Text;
                     guestname = txtGuestName.Text;
 
-                    string savepsv = drpPSV.SelectedValue;
-                    if (drpPSV.SelectedItem.Equals(savepsv))
+                    string savepsv = drpMun.SelectedValue;
+                    if (drpMun.SelectedItem.Equals(savepsv))
                     {
-                        psv = drpPSV.SelectedValue;
+                        muni = drpMun.SelectedValue;
                     }
                     else
                     {
-                        psv = drpPSV.SelectedItem.Text;
+                        muni = drpMun.SelectedItem.Text;
                     }
                     guestcontact = txtGuestMobile.Text;
 
-                    guest.updateGuest(gid, guestname, guestcontact, path);
+                    guest.updateGuest(gid, guestname, guestcontact, txtHouseNo.Text, txtBarangay.Text, muni, path);
                     Response.Redirect("Guest.aspx");
                 }
             }

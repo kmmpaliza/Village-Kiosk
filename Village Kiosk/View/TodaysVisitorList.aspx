@@ -14,7 +14,7 @@
         BorderColor="#CC0808" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
         AllowPaging="True" PageSize="15" width="100%" DataKeyNames="VisitorId"
         AutoGenerateColumns="false" onrowediting="grdVisitor_Editing" 
-          onrowcreated="grdVisitor_Created" onrowdatabound="grdVisitor_Databound"   
+          onrowcreated="grdVisitor_Created" onrowdatabound="grdVisitor_Databound" onpageindexchanging="grdVisitor_IndexChanging" 
        >
        <RowStyle HorizontalAlign="Center" />
        

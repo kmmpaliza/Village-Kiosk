@@ -46,7 +46,15 @@ namespace Village_Kiosk.View
            
         }
 
-        
+        protected void grdVisitor_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdVisitor.PageIndex = e.NewPageIndex;
+            grdVisitor.DataSource = visitor.selectVisitor().Tables["selectVisitor"];
+            grdVisitor.DataBind();
+
+        }
+
+      
 
         
 

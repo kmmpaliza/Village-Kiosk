@@ -12,5 +12,6 @@
     <asp:Button ID="btnLogIn" runat="server" Text="LOG IN GUEST" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnLoginG_Click" Width="200px"  style="background-color: #CC0808 ; color: white"/>
 <asp:Button ID="btnNewGuest" runat="server" Text="NEW" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnNewG_Click" Width="200px"  style="background-color: #CC0808 ; color: white"/>
 <asp:Button ID="btnToday" runat="server" Text="TODAY'S VISITOR" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnToday_Click" Width="200px"  style="background-color: #CC0808 ; color: white"/>
+<asp:Button ID="btnSearch" runat="server" Text="SEARCH GUEST" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnSearch_Click" Width="200px"  style="background-color: #CC0808 ; color: white"/>
 
 </asp:Content>

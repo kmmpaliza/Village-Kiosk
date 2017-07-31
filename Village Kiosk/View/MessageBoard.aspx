@@ -19,6 +19,8 @@
               CssClass="w3-input w3-border w3-margin-bottom" Width="50%" Placeholder="Mobile Number" style="text-align: center"></asp:TextBox><asp:Button ID="btnplus" runat="server" Text="+"
                CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="50px"  />
                
+
+               
 <asp:DropDownList ID="msgType" runat="server" Width="350px" Height="30px"  AutoPostBack="true"
             onselectedindexchanged="drpSelected">
             <asp:ListItem Enabled="true" Text="Select Type of Message:" Value="0">
@@ -32,6 +34,8 @@
                         
 <asp:Button ID="btnSend" runat="server" Text="SEND" CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="300px" OnClick="btnSend_Click" />
 
+
+
 <center>
                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
                </asp:ToolkitScriptManager>
@@ -40,7 +44,7 @@
                <asp:GridView ID="grdMessageBoard" runat="server" BackColor="White" 
         BorderColor="#CC0808" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
         AllowPaging="True" PageSize="15" DataKeyNames="HomeOwnerId" AutoGenerateColumns="false"  Width="100%"     
-            onrowcommand="grdMessageBoard_Add" 
+            onrowcommand="grdMessageBoard_Add" onpageindexchanging="grdMessageBoard_IndexChanging" 
            >
            <RowStyle HorizontalAlign="Center" />
 

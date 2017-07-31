@@ -31,7 +31,8 @@
     <asp:GridView ID="grdSearch" runat="server" BackColor="White" 
         BorderColor="#CC0808" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
         AllowPaging="True" PageSize="15" width="100%" AutoGenerateColumns="false" 
-            onrowdeleting="gridGuest_Deleting" onrowediting="gridGuest_Editing" DataKeyNames="GuestId" 
+            onrowdeleting="gridGuest_Deleting" onrowediting="gridGuest_Editing" 
+            DataKeyNames="GuestId" onpageindexchanging="gridGuest_IndexChanging" 
        >
        
      <RowStyle HorizontalAlign="Center" Height = "40px" />
@@ -45,12 +46,14 @@
             <asp:TemplateField HeaderText="Name">
             <ItemTemplate><asp:Label ID="lblname" runat="server" Text='<%# Eval("GuestName") %>'></asp:Label></ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Person To Visit">
-            <ItemTemplate><asp:Label ID="lblptv" runat="server" Text='<%# Eval("PersonToVisit") %>'></asp:Label></ItemTemplate>
-            </asp:TemplateField>
             <asp:TemplateField HeaderText="Contact Number">
             <ItemTemplate><asp:Label ID="lblcontact" runat="server" Text='<%# Eval("GuestMobile") %>'></asp:Label></ItemTemplate>
             </asp:TemplateField>
+            <asp:TemplateField HeaderText="Address">
+            <ItemTemplate><asp:Label ID="lblhouse" runat="server" Text='<%# Eval("GuestHouse")+ ", " + Eval("GuestBarangay")+ ", " + Eval("GuestMuni")  %>'></asp:Label></ItemTemplate>
+           
+            </asp:TemplateField>
+            
             <asp:TemplateField HeaderText="Photo" ItemStyle-Height="50px">
             <ItemTemplate><asp:Image ID="img" runat="server" ImageUrl='<%# Eval("GuestPhoto") %>' Height="30px" Width="30px" /></ItemTemplate>
             </asp:TemplateField>

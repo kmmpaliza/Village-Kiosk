@@ -56,5 +56,12 @@ namespace Village_Kiosk.View
             search.deleteGuest(id);
             Response.Redirect("SearchGuest.aspx");
         }
+
+        protected void gridGuest_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdSearch.PageIndex = e.NewPageIndex;
+            grdSearch.DataSource = search.selectGuest().Tables["selectGuest"];
+            grdSearch.DataBind();
+        }
     }
 }

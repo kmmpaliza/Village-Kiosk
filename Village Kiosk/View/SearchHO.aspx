@@ -27,7 +27,7 @@
           BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
        AllowPaging="True" PageSize="15"  DataKeyNames="HomeOwnerId" 
        onrowediting="gridHO_Editing" onrowdeleting="gridHO_Deleting" 
-            AutoGenerateColumns="false"   Width="100%" 
+            AutoGenerateColumns="false"   Width="100%" onpageindexchanging="gridHO_IndexChanging" 
               >
 
         <RowStyle HorizontalAlign="Center" Height = "40px" />

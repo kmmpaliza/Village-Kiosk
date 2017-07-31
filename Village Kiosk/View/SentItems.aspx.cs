@@ -20,5 +20,12 @@ namespace Village_Kiosk.View
 
             }
         }
+
+        protected void grdSent_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdSent.PageIndex = e.NewPageIndex;
+            grdSent.DataSource = sent.selectSent().Tables["selectSent"];
+            grdSent.DataBind();
+        }
     }
 }

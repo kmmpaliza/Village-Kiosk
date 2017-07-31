@@ -28,9 +28,23 @@
           <label><b>Mobile Number</b></label>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Invalid" ControlToValidate="txtGuestMobile" ValidationExpression="^[0-9]*$" ForeColor = "Red"></asp:RegularExpressionValidator>
           <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Mobile Number"></asp:TextBox>
-          <label><b>Photo</b></label>
-         
+          
+          <label><b>House No./Blk/Street</b></label>
+          <asp:TextBox ID="txtHouseNo" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your House Number"></asp:TextBox>
 
+          <label><b>Barangay</b></label>
+          <asp:TextBox ID="txtBarangay" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Barangay"></asp:TextBox>
+          
+          <label><b>City/Municipality</b></label><br />
+          <asp:DropDownList ID="drpMun" runat="server" Width="350px" Height="30px"  AutoPostBack="true"
+            onselectedindexchanged="drpSelected">
+            <asp:ListItem Enabled="true" Text="Select Municipality:" Value="0">
+            </asp:ListItem><asp:ListItem Text="Bacoor" Value="1">
+            </asp:ListItem><asp:ListItem Text="Carmona" Value="2">
+            </asp:ListItem><asp:ListItem Text="Laguna" Value="3">
+            </asp:ListItem><asp:ListItem Text="Dasmarinas" Value="4"></asp:ListItem></asp:DropDownList>
+            <br />
+          <label><b>Photo</b></label>
            <asp:FileUpload ID="fPhoto" runat="server" accept=".jpg, .jpeg, .png" />
          
           <asp:Button ID="btnADDG" runat="server" Text="ADD" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnAdd_Click" Width="200px" style="background-color: #CC0808 ; color: white" />

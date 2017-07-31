@@ -20,13 +20,26 @@
           <asp:Label id="guestForId" runat="server" Visible="False"></asp:Label>
           <label><b>Guest's Name  (First Name, Middle Name, Last Name)</b></label>
           <asp:TextBox ID="txtGuestName" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" ></asp:TextBox>
-          <label><b>Person to Visit</b></label>
-          <asp:DropDownList ID="drpPSV" runat="server" 
-            CssClass="w3-input w3-border w3-margin-bottom" 
-            style="text-align:center; border-color:#000080" Width="600px" 
-            AutoPostBack="True" onselectedindexchanged="selected_drpPSV" ></asp:DropDownList>
+        
            <label> <b>Mobile Number</b></label>
           <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" ></asp:TextBox>
+          
+          <label><b>House No./Blk/Street</b></label>
+          <asp:TextBox ID="txtHouseNo" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your House Number"></asp:TextBox>
+
+          <label><b>Barangay</b></label>
+          <asp:TextBox ID="txtBarangay" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Barangay"></asp:TextBox>
+          
+          <label><b>City/Municipality</b></label><br />
+          <asp:DropDownList ID="drpMun" runat="server" Width="350px" Height="30px"  AutoPostBack="true"
+            onselectedindexchanged="drpSelected">
+            <asp:ListItem Enabled="true" Text="Select Municipality:" Value="0">
+            </asp:ListItem><asp:ListItem Text="Bacoor" Value="1">
+            </asp:ListItem><asp:ListItem Text="Carmona" Value="2">
+            </asp:ListItem><asp:ListItem Text="Laguna" Value="3">
+            </asp:ListItem><asp:ListItem Text="Dasmarinas" Value="4"></asp:ListItem></asp:DropDownList>
+
+            <br />
           <label><b>Photo</b></label>
            <asp:FileUpload ID="fPhoto" runat="server" accept=".jpg, .jpeg, .png" />
          

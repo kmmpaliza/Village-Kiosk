@@ -269,15 +269,17 @@ namespace VillageClass
             set { guestId = value; }
         }
 
-        public bool checkGuest(string name, string mobile, string photo)
+        public bool checkGuest(string name, string mobile, string housenum)
         {
+
+
             bool found = false;
             conn.Open();
-            SqlCommand readCmd = new SqlCommand("checkGuest", conn);
+            SqlCommand readCmd = new SqlCommand("checkExistGuest", conn);
             readCmd.CommandType = CommandType.StoredProcedure;
             readCmd.Parameters.Add("@GuestName", SqlDbType.VarChar).Value = name;
             readCmd.Parameters.Add("@GuestMobile", SqlDbType.VarChar).Value = mobile;
-            readCmd.Parameters.Add("@GuestPhoto", SqlDbType.VarChar).Value = photo;
+            readCmd.Parameters.Add("@GuestHouse", SqlDbType.VarChar).Value = housenum;
             SqlDataReader dr;
             dr = readCmd.ExecuteReader();
             while (dr.Read())
@@ -330,6 +332,9 @@ namespace VillageClass
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@GuestId", SqlDbType.VarChar).Value = search;
             cmd.Parameters.Add("@GuestName", SqlDbType.VarChar).Value = search;
+            cmd.Parameters.Add("@GuestHouse", SqlDbType.VarChar).Value = search;
+            cmd.Parameters.Add("@GuestBarangay", SqlDbType.VarChar).Value = search;
+            cmd.Parameters.Add("@GuestMuni", SqlDbType.VarChar).Value = search;
             cmd.Parameters.Add("@GuestMobile", SqlDbType.VarChar).Value = search;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             ds.Clear();
@@ -340,7 +345,7 @@ namespace VillageClass
 
 
        
-        public void saveGuest(string guest_name, string guest_contact, string guest_photo)
+        public void saveGuest(string guest_name, string guest_contact, string housenum, string brgy, string muni, string guest_photo)
         {
 
             conn.Open();
@@ -348,6 +353,9 @@ namespace VillageClass
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@GuestName", SqlDbType.VarChar).Value = guest_name;
             cmd.Parameters.Add("@GuestMobile", SqlDbType.VarChar).Value = guest_contact;
+            cmd.Parameters.Add("@GuestHouse", SqlDbType.VarChar).Value = housenum;
+            cmd.Parameters.Add("@GuestBarangay", SqlDbType.VarChar).Value = brgy;
+            cmd.Parameters.Add("@GuestMuni", SqlDbType.VarChar).Value = muni;
             cmd.Parameters.Add("@GuestPhoto", SqlDbType.VarChar).Value = guest_photo;
 
             cmd.ExecuteNonQuery();
@@ -355,7 +363,7 @@ namespace VillageClass
 
         }
 
-        public void updateGuest(string id, string guest_name, string guest_contact, string guest_photo)
+        public void updateGuest(string id, string guest_name, string guest_contact, string housenum, string brgy, string muni, string guest_photo)
         {
             conn.Open();
             SqlCommand cmd = new SqlCommand("updateGuest", conn);
@@ -363,6 +371,9 @@ namespace VillageClass
             cmd.Parameters.Add("@GuestId", SqlDbType.VarChar).Value = id;
             cmd.Parameters.Add("@GuestName", SqlDbType.VarChar).Value = guest_name;
             cmd.Parameters.Add("@GuestMobile", SqlDbType.VarChar).Value = guest_contact;
+            cmd.Parameters.Add("@GuestHouse", SqlDbType.VarChar).Value = housenum;
+            cmd.Parameters.Add("@GuestBarangay", SqlDbType.VarChar).Value = brgy;
+            cmd.Parameters.Add("@GuestMuni", SqlDbType.VarChar).Value = muni;
             cmd.Parameters.Add("@GuestPhoto", SqlDbType.VarChar).Value = guest_photo;
 
             cmd.ExecuteNonQuery();

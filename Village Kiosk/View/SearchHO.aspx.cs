@@ -59,6 +59,14 @@ namespace Village_Kiosk.View
             Response.Redirect("SearchHO.aspx");
         }
 
+        protected void gridHO_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdHomeOwner.PageIndex = e.NewPageIndex;
+            grdHomeOwner.DataSource = homeOwner.selectHomeOwner().Tables["selectHomeOwner"];
+            grdHomeOwner.DataBind();
+
+        }
+
         
       
     }

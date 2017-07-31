@@ -118,6 +118,7 @@ namespace Village_Kiosk.View
                 {
                     string numberFormat = String.Format("{0: +63##########}", long.Parse(number));
 
+
                     var message = MessageResource.Create(
                         to: new PhoneNumber(numberFormat),
                         from: new PhoneNumber("+1 650-603-5869"),
@@ -135,6 +136,13 @@ namespace Village_Kiosk.View
                 msgType.SelectedIndex = 0;
 
             }
+        }
+
+        protected void grdMessageBoard_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdMessageBoard.PageIndex = e.NewPageIndex;
+            grdMessageBoard.DataSource = homeOwner.selectHomeOwner().Tables["selectHomeOwner"];
+            grdMessageBoard.DataBind();
         }
         
     }

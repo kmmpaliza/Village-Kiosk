@@ -13,7 +13,8 @@
 
 <asp:GridView ID="grdSent" runat="server" BackColor="White" 
         BorderColor="#CC0808" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
-        AllowPaging="True" PageSize="15" DataKeyNames="SentId" AutoGenerateColumns="false"  Width="100%"     
+        AllowPaging="True" PageSize="15" DataKeyNames="SentId" 
+            AutoGenerateColumns="false"  Width="100%" onpageindexchanging="grdSent_IndexChanging"     
            >
            <RowStyle HorizontalAlign="Center" />
 
