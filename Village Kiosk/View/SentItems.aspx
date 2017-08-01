@@ -8,7 +8,9 @@
 
 <asp:GridView ID="grdSent" runat="server" BackColor="White" 
         BorderColor="#CC0808" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
-        AllowPaging="True" PageSize="15" DataKeyNames="SentId" AutoGenerateColumns="false"  Width="73%"  style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"   
+        AllowPaging="True" PageSize="15" DataKeyNames="SentId" AutoGenerateColumns="false"
+        onpageindexchanging="grdSent_IndexChanging"  Width="73%" 
+         style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"   
            >
            <RowStyle HorizontalAlign="Center" />
 

@@ -7,37 +7,46 @@ using System.Web.UI.WebControls;
 using System.Data;
 using VillageClass;
 using System.IO;
+using System.Web.Services;
 
 namespace Village_Kiosk.View
 {
     public partial class EditGuest : System.Web.UI.Page
     {
-        string guestname, psv, guestcontact, alertmsg;
+        string guestname, guestcontact, muni;
         VillageKioskClass guest = new VillageKioskClass();
         DataSet ds = new DataSet();
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!IsPostBack)
+            if (!this.IsPostBack)
             {
-
-                drpPSV.DataSource = guest.getPersonToVisitInfo().Tables["guestHomeOwner"];
-                drpPSV.DataTextField = "HomeOwnerName";
-                drpPSV.DataBind();
-
+                if (Request.InputStream.Length > 0)
+                {
+                    using (StreamReader reader = new StreamReader(Request.InputStream))
+                    {
+                        string hexString = Server.UrlEncode(reader.ReadToEnd());
+                        string imageName = DateTime.Now.ToString("dd-MM-yy hh-mm-ss");
+                        string imagePath = string.Format("~/Captures/{0}.png", imageName);
+                        File.WriteAllBytes(Server.MapPath(imagePath), ConvertHexToBytes(hexString));
+                        Session["CapturedImage"] = ResolveUrl(imagePath);
+                    }
+                }
             }
 
-             if (Request.QueryString["id"] != null && IsPostBack == false)
+           if (Request.QueryString["id"] != null && IsPostBack == false)
             {
                 string id = Request.QueryString["id"];
                 guest.GuestId = id;
 
                 guestForId.Text = id;
                 txtGuestName.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][2].ToString();
-                drpPSV.SelectedValue = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][3].ToString();
-                txtGuestMobile.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][4].ToString();
-                fPhoto.Attributes["File Name"] = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][5].ToString();
+                txtGuestMobile.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][3].ToString();
+                txtHouseNo.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][4].ToString();
+                txtBarangay.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][5].ToString();
+                drpMun.SelectedItem.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][6].ToString();
+               
 
                 btnUpdateG.Enabled = true;
             }  
@@ -45,58 +54,50 @@ namespace Village_Kiosk.View
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            string filename = fPhoto.FileName;
-            string path = "~/Uploads/" + filename.ToString();
-            if (fPhoto.HasFile)
-            {
+            string imageName = DateTime.Now.ToString("dd-MM-yy hh-mm-ss");
+            string imagePath = string.Format("~/Captures/{0}.png", imageName);
 
-                if (File.Exists(path))
-                {
-                    alertmsg = "Pls. check your photo";
-                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + alertmsg + "');", true);
+         
+                    string msg = "Data Updated";
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + msg + "');", true);
 
-                }
-                else
-                {
-
-
-                    fPhoto.PostedFile.SaveAs(Server.MapPath("~/Uploads/") + filename);
                     string gid = guestForId.Text;
                     guestname = txtGuestName.Text;
 
-                    string savepsv = drpPSV.SelectedValue;
-                    if (drpPSV.SelectedItem.Equals(savepsv))
+                    string savepsv = drpMun.SelectedValue;
+                    if (drpMun.SelectedItem.Equals(savepsv))
                     {
-                        psv = drpPSV.SelectedValue;
+                        muni = drpMun.SelectedValue;
                     }
                     else
                     {
-                        psv = drpPSV.SelectedItem.Text;
+                        muni = drpMun.SelectedItem.Text;
                     }
                     guestcontact = txtGuestMobile.Text;
 
-                    guest.updateGuest(gid, guestname, guestcontact, path);
-                    Response.Redirect("Guest.aspx");
-                }
-            }
-            else
+                    guest.updateGuest(gid, guestname, guestcontact, txtHouseNo.Text, txtBarangay.Text, muni, imagePath);
+
+                    Response.Redirect("SearchGuest.aspx");
+
+                
+        }
+
+        private static byte[] ConvertHexToBytes(string hex)
+        {
+            byte[] bytes = new byte[hex.Length / 2];
+            for (int i = 0; i < hex.Length; i += 2)
             {
-                alertmsg = "Pls. upload your photo";
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + alertmsg + "');", true);
+                bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
             }
-
+            return bytes;
         }
 
-        protected void selected_drpPSV(object sender, EventArgs e)
+        [WebMethod(EnableSession = true)]
+        public static string GetCapturedImage()
         {
-
-        }
-
-        public override void VerifyRenderingInServerForm(Control control)
-        {
-            /* Confirms that an HtmlForm control is rendered for the specified ASP.NET
-               server control at run time. */
-
+            string url = HttpContext.Current.Session["CapturedImage"].ToString();
+            HttpContext.Current.Session["CapturedImage"] = null;
+            return url;
         }
     }
 }

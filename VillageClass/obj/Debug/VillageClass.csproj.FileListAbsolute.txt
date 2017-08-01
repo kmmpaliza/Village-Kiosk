@@ -18,3 +18,8 @@ C:\Users\chaelamorin\gc\VillageClass\bin\Debug\VillageClass.pdb
 C:\Users\chaelamorin\gc\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
 C:\Users\chaelamorin\gc\VillageClass\obj\Debug\VillageClass.dll
 C:\Users\chaelamorin\gc\VillageClass\obj\Debug\VillageClass.pdb
+C:\Users\Maecea\Desktop\Thesis3\gc\VillageClass\bin\Debug\VillageClass.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\VillageClass\bin\Debug\VillageClass.pdb
+C:\Users\Maecea\Desktop\Thesis3\gc\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
+C:\Users\Maecea\Desktop\Thesis3\gc\VillageClass\obj\Debug\VillageClass.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\VillageClass\obj\Debug\VillageClass.pdb

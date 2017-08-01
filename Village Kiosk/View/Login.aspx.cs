@@ -37,6 +37,7 @@ namespace Village_Kiosk.View
                 message = "Invalid username or password.";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
                 txtPassword.Text = "";
+                txtUsername.Text = "";
             }
         }
     }

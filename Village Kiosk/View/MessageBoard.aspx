@@ -33,8 +33,9 @@
 
                <asp:GridView ID="grdMessageBoard" runat="server" BackColor="White" 
         BorderColor="#CC0808" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
-        AllowPaging="True" PageSize="15" DataKeyNames="HomeOwnerId" AutoGenerateColumns="false"  Width="100%"     style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"
-            onrowcommand="grdMessageBoard_Add" 
+        AllowPaging="True" PageSize="15" DataKeyNames="HomeOwnerId" AutoGenerateColumns="false"  Width="100%"   
+          style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"
+            onrowcommand="grdMessageBoard_Add" onpageindexchanging="grdMessageBoard_IndexChanging" 
            >
            <RowStyle HorizontalAlign="Center" />
 

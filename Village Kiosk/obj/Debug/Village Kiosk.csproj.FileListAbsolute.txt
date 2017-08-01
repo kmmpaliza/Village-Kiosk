@@ -80,3 +80,32 @@ C:\Users\chaelamorin\gc\Village Kiosk\bin\zh-CHT\AjaxControlToolkit.resources.dl
 C:\Users\chaelamorin\gc\Village Kiosk\obj\Debug\Village Kiosk.csprojResolveAssemblyReference.cache
 C:\Users\chaelamorin\gc\Village Kiosk\obj\Debug\Village Kiosk.dll
 C:\Users\chaelamorin\gc\Village Kiosk\obj\Debug\Village Kiosk.pdb
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\Village Kiosk.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\Village Kiosk.pdb
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\JWT.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\Newtonsoft.Json.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\Twilio.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\VillageClass.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\VillageClass.pdb
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\AjaxControlToolkit.pdb
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\Newtonsoft.Json.xml
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\Twilio.xml
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\obj\Debug\Village Kiosk.csprojResolveAssemblyReference.cache
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\obj\Debug\Village Kiosk.dll
+C:\Users\Maecea\Desktop\Thesis3\gc\Village Kiosk\obj\Debug\Village Kiosk.pdb

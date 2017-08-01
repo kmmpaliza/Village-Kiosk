@@ -31,15 +31,6 @@ namespace Village_Kiosk.View {
         protected global::System.Web.UI.WebControls.TextBox txtGuestName;
         
         /// <summary>
-        /// drpPSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpPSV;
-        
-        /// <summary>
         /// txtGuestMobile control.
         /// </summary>
         /// <remarks>
@@ -49,13 +40,49 @@ namespace Village_Kiosk.View {
         protected global::System.Web.UI.WebControls.TextBox txtGuestMobile;
         
         /// <summary>
-        /// fPhoto control.
+        /// txtHouseNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fPhoto;
+        protected global::System.Web.UI.WebControls.TextBox txtHouseNo;
+        
+        /// <summary>
+        /// txtBarangay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBarangay;
+        
+        /// <summary>
+        /// drpMun control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpMun;
+        
+        /// <summary>
+        /// imgCapture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCapture;
+        
+        /// <summary>
+        /// btnCapture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCapture;
         
         /// <summary>
         /// btnUpdateG control.

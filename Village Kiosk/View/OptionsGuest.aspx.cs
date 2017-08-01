@@ -29,6 +29,16 @@ namespace Village_Kiosk.View
             Response.Redirect("TodaysVisitorList.aspx");
         }
 
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SearchGuest.aspx");
+        }
+
+        protected void btnVisit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("VisitorsLogout.aspx");
+        }
+
 
     }
 }

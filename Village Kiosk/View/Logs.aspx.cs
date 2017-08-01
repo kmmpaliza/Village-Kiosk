@@ -35,5 +35,12 @@ namespace Village_Kiosk.View
             grdLogs.DataSource = log.selectLogs().Tables["selectLog"];
             grdLogs.DataBind();
         }
+
+        protected void grdLogs_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdLogs.PageIndex = e.NewPageIndex;
+            grdLogs.DataSource = log.selectLogs().Tables["selectLog"];
+            grdLogs.DataBind();
+        }
     }
 }

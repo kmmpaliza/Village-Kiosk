@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using VillageClass;
+using System.Configuration;
+using AjaxControlToolkit;
 
 namespace Village_Kiosk.View
 {
@@ -19,7 +21,7 @@ namespace Village_Kiosk.View
                 grdSearch.DataSource = search.selectGuest().Tables["selectGuest"];
                 grdSearch.DataBind();
 
-
+                ModalPopupExtender1.Hide();
             }
         }
 
@@ -44,17 +46,63 @@ namespace Village_Kiosk.View
             grdSearch.DataBind();
         }
 
-        protected void gridGuest_Editing(object sender, GridViewEditEventArgs e)
+        
+       protected void btnEdit_Click(object sender, ImageClickEventArgs e)
         {
-            string id = Convert.ToString(grdSearch.DataKeys[e.NewEditIndex].Value);
-            Response.Redirect("EditGuest.aspx?id=" + id);
-        }
+            ImageButton imgbtn = sender as ImageButton;
+            GridViewRow row = (GridViewRow)imgbtn.NamingContainer;
+            string id = this.grdSearch.DataKeys[row.RowIndex].Value.ToString();
+            /*Response.Redirect("EditGuest.aspx?id=" + id);*/
 
-        protected void gridGuest_Deleting(object sender, GridViewDeleteEventArgs e)
+            lblforId.Text = id;
+     }
+
+        protected void btnDelete_Click(object sender, ImageClickEventArgs e)
         {
-            string id = Convert.ToString(this.grdSearch.DataKeys[e.RowIndex].Value);
+            ImageButton imgbtn = sender as ImageButton;
+            GridViewRow row = (GridViewRow)imgbtn.NamingContainer;
+            string id = this.grdSearch.DataKeys[row.RowIndex].Value.ToString();
             search.deleteGuest(id);
             Response.Redirect("SearchGuest.aspx");
         }
+
+        protected void gridGuest_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdSearch.PageIndex = e.NewPageIndex;
+            grdSearch.DataSource = search.selectGuest().Tables["selectGuest"];
+            grdSearch.DataBind();
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string id = lblforId.Text;
+            if ((String.IsNullOrEmpty(txtUsername.Text)) || (String.IsNullOrEmpty(txtPassword.Text)))
+            {
+                string message = "Please Login.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
+            }
+
+            if (search.CheckUser(txtUsername.Text, txtPassword.Text))
+            {
+                Response.Redirect("EditGuest.aspx?id=" + id);
+            }
+            else
+            {
+                string msg = "Invalid username or password.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + msg + "');", true);
+                txtPassword.Text = "";
+                txtUsername.Text = "";
+            }
+        }
+
+        protected void grdGuest_Command(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "EditValue")
+            {
+                
+                ModalPopupExtender1.Show();
+            }
+        }
+        
     }
 }

@@ -136,6 +136,13 @@ namespace Village_Kiosk.View
 
             }
         }
+
+        protected void grdMessageBoard_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdMessageBoard.PageIndex = e.NewPageIndex;
+            grdMessageBoard.DataSource = homeOwner.selectHomeOwner().Tables["selectHomeOwner"];
+            grdMessageBoard.DataBind();
+        }
         
     }
 }

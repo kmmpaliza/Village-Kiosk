@@ -91,6 +91,7 @@
     <Content Include="Bootstrap\js\plugins\morris\morris.js" />
     <Content Include="Bootstrap\js\plugins\morris\morris.min.js" />
     <Content Include="Bootstrap\js\plugins\morris\raphael.min.js" />
+    <Content Include="CS.aspx" />
     <Content Include="Images\btnEdit.png" />
     <Content Include="Images\btnTrash.png" />
     <Content Include="Images\newLogoo.png" />
@@ -144,6 +145,7 @@
     <Content Include="View\SentItems.aspx" />
     <Content Include="View\TodaysVisitorList.aspx" />
     <Content Include="View\Visitor.aspx" />
+    <Content Include="View\VisitorsLogout.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -151,8 +153,15 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Webcam_Plugin\jquery.webcam.js" />
+    <Content Include="Webcam_Plugin\jscam.swf" />
+    <Content Include="Webcam_Plugin\jscam_canvas_only.swf" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CS.aspx.cs">
+      <DependentUpon>CS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Master\LoginMaster.Master.cs">
       <DependentUpon>LoginMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -301,6 +310,13 @@
     <Compile Include="View\Visitor.aspx.designer.cs">
       <DependentUpon>Visitor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\VisitorsLogout.aspx.cs">
+      <DependentUpon>VisitorsLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\VisitorsLogout.aspx.designer.cs">
+      <DependentUpon>VisitorsLogout.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master\VillageMaster.Master" />
@@ -397,6 +413,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Captures\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

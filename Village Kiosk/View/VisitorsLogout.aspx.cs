@@ -8,22 +8,22 @@ using VillageClass;
 
 namespace Village_Kiosk.View
 {
-    public partial class TodaysVisitorList : System.Web.UI.Page
+    public partial class VisitorsLogout : System.Web.UI.Page
     {
-        string name, persontovisit, reasonofvisit, mobile, timein, timeout;
+         string name, persontovisit, reasonofvisit, mobile, timein, timeout;
         VillageKioskClass visitor = new VillageKioskClass();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                grdVisitor.DataSource = visitor.selectVisitor().Tables["selectVisitor"];
+                grdVisitor.DataSource = visitor.getLogoutVisitor("").Tables["checkLogOutGuest"];
                 grdVisitor.DataBind();
 
             }
         }
 
-        protected void grdVisitor_Editing(object sender, GridViewEditEventArgs e)
+            protected void grdVisitor_Editing(object sender, GridViewEditEventArgs e)
         {
             string id = Convert.ToString(this.grdVisitor.DataKeys[e.NewEditIndex].Value);
             name = visitor.getVisitor(id).Tables["getVisitor"].Rows[0][2].ToString();
@@ -43,11 +43,6 @@ namespace Village_Kiosk.View
             grdVisitor.DataBind();
 
         }
-
         
-
-        
-
-
     }
 }

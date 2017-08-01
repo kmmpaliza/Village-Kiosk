@@ -80,21 +80,21 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                 
-                    <li class="active">
+                    <li ID="First" runat="server">
                 
 
                         <a href="../View/OptionsHomeOwner.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-home"></i></font><font size="5px" ; font face="Trebuchet MS"> Home Owners</font></a>
                     </li>
-                    <li>
+                    <li ID="SecondPage" runat="server">
                         <a href="../View/OptionsGuest.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-male"></i></font><font size="5px" ; font face="Trebuchet MS"> Guest</font></a>
                     </li>
-                    <li>
+                    <li ID="Third" runat="server">
                         <a href="../View/OptionsMessage.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-envelope"></i></font><font size="5px" ; font face="Trebuchet MS"> Message Board</font></a>
                     </li>
-                    <li>
+                    <li ID="Fourth" runat="server">
                         <a href="../View/Schedule.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-clock-o"></i></font><font size="5px" ; font face="Trebuchet MS"> Schedule</font></a>
                     </li>
-                    <li>
+                    <li ID="Five" runat="server">
                         <a href="../View/AdminDashboard.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-user"></i></font><font size="5px" ; font face="Trebuchet MS"> Admin</font></a>
                     </li>
 
@@ -188,6 +188,46 @@
     <script src="../Bootstrap/js/plugins/morris/morris.min.js"></script>
     <script src="../Bootstrap/js/plugins/morris/morris-data.js"></script>
 
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src='<%=ResolveUrl("~/Webcam_Plugin/jquery.webcam.js") %>' type="text/javascript"></script>
+<script type="text/javascript">
+    var pageUrl = '<%=ResolveUrl("~/CS.aspx") %>';
+    $(function () {
+        jQuery("#webcam").webcam({
+            width: 320,
+            height: 240,
+            mode: "save",
+            swffile: '<%=ResolveUrl("~/Webcam_Plugin/jscam.swf") %>',
+            debug: function (type, status) {
+                $('#camStatus').append(type + ": " + status + '<br /><br />');
+            },
+            onSave: function (data) {
+                $.ajax({
+                    type: "POST",
+                    url: pageUrl + "/GetCapturedImage",
+                    data: '',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (r) {
+                        $("[id*=imgCapture]").css("visibility", "visible");
+                        $("[id*=imgCapture]").attr("src", r.d);
+                    },
+                    failure: function (response) {
+                        alert(response.d);
+                    }
+                });
+            },
+            onCapture: function () {
+                webcam.save(pageUrl);
+            }
+        });
+    });
+    function Capture() {
+        webcam.capture();
+        return false;
+    }
+</script>
     
     </form>
 </body>

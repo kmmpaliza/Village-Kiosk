@@ -25,18 +25,17 @@
       <asp:GridView ID="grdHomeOwner" runat="server" BackColor="White" 
           BorderColor="#000" BorderStyle="None" BorderWidth="1px" 
        AllowPaging="True" PageSize="15"  DataKeyNames="HomeOwnerId" 
-       onrowediting="gridHO_Editing" onrowdeleting="gridHO_Deleting" 
-            AutoGenerateColumns="false"   Width="73%"  style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"
+            AutoGenerateColumns="false"   Width="73%" onpageindexchanging="gridHO_IndexChanging"
+             
+           style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;" onrowcommand="gridHO_RowCommand"
               >
 
         <RowStyle HorizontalAlign="Center" Height = "40px" />
 
          <Columns>
-           <asp:CommandField ShowEditButton="True" ButtonType="Button"/>
-            <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
-
-            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" ID="btnEditImage" ImageUrl="~/Images/btnEdit.png" Width="20px" Height="20px" PostBackUrl="EditHomeOwners.aspx" /> </ItemTemplate></asp:TemplateField>
-            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" ID="btnEditImage" ImageUrl="~/Images/btnTrash.png" Width="20px" Height="20px" /> </ItemTemplate></asp:TemplateField>
+           
+            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" OnClick="btnEdit_Click" ID="btnEditImage" CommandName="EditValue" ImageUrl="~/Images/btnEdit.png" Width="20px" Height="20px"  /> </ItemTemplate></asp:TemplateField>
+            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" OnClick="btnDelete_Click" ID="btnDelImage" ImageUrl="~/Images/btnTrash.png" Width="20px" Height="20px" /> </ItemTemplate></asp:TemplateField>
 
             <asp:TemplateField HeaderText="Homeowner Id">
             <ItemTemplate><asp:Label ID="lblid" runat="server" Text='<%# Eval("HomeOwnerId") %>'></asp:Label></ItemTemplate>
@@ -67,11 +66,33 @@
      </asp:GridView>
 
 
+     <input id="editClick" type="hidden" name="hddclick" runat="server" />
+    <asp:ScriptManager ID = "ScriptManager1" runat="server"> </asp:ScriptManager>
+             
+             <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" 
+                       PopupControlID="Panel1" CancelControlID="btnCancel" 
+                       TargetControlID="editClick" BackgroundCssClass="modalBackground" Drag="true">
+             </asp:ModalPopupExtender>
 
+
+            <asp:Panel ID="Panel1" runat="server" CssClass="modalBackground">
+
+    <div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px">
+    <asp:Label ID="lblforId" runat="server" Visible="false"></asp:Label>
+    <asp:Label ID="lbl1" runat ="server"> USERNAME: </asp:Label><br />
+    <asp:TextBox ID="txtUsername" runat="server" placeholder="Type your username"></asp:TextBox><br />
+    <asp:Label ID="lbl2" runat ="server"> PASSWORD: </asp:Label><br />
+    <asp:TextBox ID="txtPassword" runat="server" placeholder="Type your password" TextMode="Password"></asp:TextBox>
+    <br />
+    <br />
+    <asp:Button ID="btnSub" runat="server" Text="Submit" OnClick="btnSubmit_Click" CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="300px"  />
+    <br />
+    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="300px"  />
+    <br />
+    </div>
+    </asp:Panel>
 
     </div>
-
-</div>
 
 <br />
 <br />

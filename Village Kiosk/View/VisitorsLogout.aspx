@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="TodaysVisitorList.aspx.cs" Inherits="Village_Kiosk.View.TodaysVisitorList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="VisitorsLogout.aspx.cs" Inherits="Village_Kiosk.View.VisitorsLogout" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 <br />
     
  <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-male"></i></font> TODAY'S VISITOR/S</h3>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-male"></i></font>VISITOR/S</h3>
  
  <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
  <br />
@@ -51,5 +51,6 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#00547E" />
     </asp:GridView>
-
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 </asp:Content>

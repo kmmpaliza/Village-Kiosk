@@ -46,20 +46,65 @@ namespace Village_Kiosk.View
             grdHomeOwner.DataBind();
         }
 
-        protected void gridHO_Editing(object sender, GridViewEditEventArgs e)
+       
+
+        protected void btnEdit_Click(object sender, ImageClickEventArgs e)
         {
-            string id = Convert.ToString(grdHomeOwner.DataKeys[e.NewEditIndex].Value);
-            Response.Redirect("EditHomeOwners.aspx?id=" + id);
+            ImageButton imgbtn = sender as ImageButton;
+            GridViewRow row = (GridViewRow)imgbtn.NamingContainer;
+            string id = Convert.ToString(this.grdHomeOwner.DataKeys[row.RowIndex].Value);
+            //Response.Redirect("EditHomeOwners.aspx?id=" + id);
+
+            lblforId.Text = id;
         }
 
-        protected void gridHO_Deleting(object sender, GridViewDeleteEventArgs e)
+        protected void btnDelete_Click(object sender, ImageClickEventArgs e)
         {
-            string id = Convert.ToString(this.grdHomeOwner.DataKeys[e.RowIndex].Value);
+            ImageButton imgbtn = sender as ImageButton;
+            GridViewRow row = (GridViewRow)imgbtn.NamingContainer;
+            string id = Convert.ToString(this.grdHomeOwner.DataKeys[row.RowIndex].Value);
             homeOwner.deleteHomeOwner(id);
             Response.Redirect("SearchHO.aspx");
         }
 
-        
+        protected void gridHO_IndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdHomeOwner.PageIndex = e.NewPageIndex;
+            grdHomeOwner.DataSource = homeOwner.selectHomeOwner().Tables["selectHomeOwner"];
+            grdHomeOwner.DataBind();
+
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string id = lblforId.Text;
+            if ((String.IsNullOrEmpty(txtUsername.Text)) || (String.IsNullOrEmpty(txtPassword.Text)))
+            {
+                string message = "Please Login.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
+            }
+
+            if (homeOwner.CheckUser(txtUsername.Text, txtPassword.Text))
+            {
+                Response.Redirect("EditHomeOwners.aspx?id=" + id);
+            }
+            else
+            {
+                string msg = "Invalid username or password.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + msg + "');", true);
+                txtPassword.Text = "";
+                txtUsername.Text = "";
+            }
+        }
+
+        protected void gridHO_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "EditValue")
+            {
+
+                ModalPopupExtender1.Show();
+            }
+        }
 
         
       

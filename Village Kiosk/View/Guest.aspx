@@ -13,9 +13,8 @@
              ControlToValidate="txtGuestName"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Guest's Name  </b></label>
-         <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtGuestName" ID="RegularExpressionValidator1" ValidationExpression = "^[\s\S]{0,40}$" runat="server" ForeColor = "Red" ErrorMessage="Maximum of 40 Characters Only"></asp:RegularExpressionValidator>
-          <asp:TextBox ID="txtGuestName" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "First Name, Middle Name, Last Name" ></asp:TextBox>
+          <label><b>Guest's Name  (First Name, Middle Name, Last Name)</b></label>
+          <asp:TextBox ID="txtGuestName" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Full Name" ></asp:TextBox>
           
           <asp:RequiredFieldValidator 
              id="RequiredFieldValidator2" runat="server" 
@@ -23,20 +22,60 @@
              ControlToValidate="txtGuestName"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Mobile Number</b></label>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Invalid" ControlToValidate="txtGuestMobile" ValidationExpression="^09[0-9][0-9]{8}$" ForeColor = "Red"></asp:RegularExpressionValidator>
-          <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "09xxxxxxxxx"></asp:TextBox>
+          <label><b>Mobile Number</b></label>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Invalid" ControlToValidate="txtGuestMobile" ValidationExpression="^[0-9]*$" ForeColor = "Red"></asp:RegularExpressionValidator>
+          <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Mobile Number"></asp:TextBox>
           
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Address</b></label>
-          <asp:TextBox ID="txtHouseNo" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "House No./Blk/Street"></asp:TextBox>
+          <label><b>House No./Blk/Street</b></label>
+          <asp:TextBox ID="txtHouseNo" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your House Number"></asp:TextBox>
 
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Photo</b></label>
-           <asp:FileUpload ID="fPhoto" runat="server" accept=".jpg, .jpeg, .png" />
+          <label><b>Barangay</b></label>
+          <asp:TextBox ID="txtBarangay" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Barangay"></asp:TextBox>
+          
+          <label><b>City/Municipality</b></label><br />
+          <asp:DropDownList ID="drpMun" runat="server" Width="350px" Height="30px"  AutoPostBack="true"
+         >
+            <asp:ListItem Enabled="true" Text="Select Municipality:" Value="0">
+            </asp:ListItem><asp:ListItem Text="Bacoor" Value="1">
+            </asp:ListItem><asp:ListItem Text="Carmona" Value="2">
+            </asp:ListItem><asp:ListItem Text="Laguna" Value="3">
+            </asp:ListItem><asp:ListItem Text="Dasmarinas" Value="4"></asp:ListItem></asp:DropDownList>
+            <br />
+          <label><b>Photo</b></label>
          
-          <asp:Button ID="btnADDG" runat="server" Text="ADD" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding" OnClick="btnAdd_Click" Width="200px" style="background-color: white ; color: red ;font-size: 15px; font-family: Trebuchet MS; font-weight: bold" />
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center">
+            <u>Live Camera</u>
+        </td>
+        <td>
+        </td>
+        <td align="center">
+            <u>Captured Picture</u>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="webcam">
+            </div>
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <asp:Image ID="imgCapture" runat="server" Style="visibility: hidden; width: 320px;
+                height: 240px" />
+        </td>
+    </tr>
+</table>
+<br />
+<asp:Button ID="btnCapture" Text="Capture" runat="server" OnClientClick="return Capture();" />
+<br />
+
+         
+          <asp:Button ID="btnADDG" runat="server" Text="ADD" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnAdd_Click" Width="200px" style="background-color: #CC0808 ; color: white" />
 
   </div>   
 
 </div>
-
 </asp:Content>

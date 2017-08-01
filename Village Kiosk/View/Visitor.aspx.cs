@@ -33,7 +33,10 @@ namespace Village_Kiosk.View
                 drpPSV.DataTextField = "HomeOwnerName";
                 drpPSV.DataBind();
 
-               
+                int index = drpPSV.SelectedIndex;
+                txtMobile.Text = visitor.getPersonToVisitInfo().Tables["guestHomeOwner"].Rows[index][1].ToString();
+
+                //name = drpVisitorName.SelectedItem.Text;
                 
             }
 

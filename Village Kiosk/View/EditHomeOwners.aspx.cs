@@ -35,15 +35,7 @@ namespace Village_Kiosk.View
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            if ((String.IsNullOrEmpty(txtEditHOName.Text)) || (String.IsNullOrEmpty(txtEditHOHouseNumber.Text))
-                || (String.IsNullOrEmpty(txtEditHOMobileNumber.Text)))
-            {
-                string alertmessage = "Please Fill up the form";
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + alertmessage + "');", true);
-            }
-            else
-            {
-
+            
                 string tid = forEditID.Text;
                 homeownername = txtEditHOName.Text;
                 tenantname = txtEditTenantName.Text;
@@ -54,7 +46,7 @@ namespace Village_Kiosk.View
 
                 
                 Response.Redirect("SearchHO.aspx");
-            }
+            
         }
 
       

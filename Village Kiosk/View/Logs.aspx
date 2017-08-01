@@ -32,7 +32,7 @@
       <asp:GridView ID="grdLogs" runat="server" BackColor="White" 
           BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
        AllowPaging="True" PageSize="15"  DataKeyNames="LogId" 
-            AutoGenerateColumns="false"   Width="100%" 
+            AutoGenerateColumns="false"   Width="100%" onpageindexchanging="grdLogs_IndexChanging" 
               >
 
         <HeaderStyle HorizontalAlign="Center" />
