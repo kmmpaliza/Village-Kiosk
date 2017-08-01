@@ -27,7 +27,7 @@ namespace Village_Kiosk.View
 
             if ((String.IsNullOrEmpty(txtNumber.Text)) || (String.IsNullOrEmpty(txtMessage.Text)) || (msgType.SelectedIndex == 0))
             {
-                string alertmessage = "Please Fill up the form";
+                string alertmessage = "Please Select Type of Message";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + alertmessage + "');", true);
             }
             else

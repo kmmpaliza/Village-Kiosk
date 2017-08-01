@@ -1,16 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="OptionsGuest.aspx.cs" Inherits="Village_Kiosk.View.OptionsGuest" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px" >
- <h3 style="color: #CC0808; font-size:40px">Guest</h3>
+   <br />
+   <div align="center">
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-male"></i></font> GUESTS</h3>
 
- <hr style="color: #CC0808; border-width: 5.5px; border-style:solid;"/>
- </div>
-</asp:Content>
+ <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
+ <br />
+ <br />
+ <br />
+ <table>
+    <tr>
+<td>
+<asp:Button ID="btnLogIn" runat="server" Text="LOG IN" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnLoginG_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+</td>
+<td>
+&nbsp&nbsp&nbsp&nbsp
+</td>
+<td>
+<asp:Button ID="btnNewGuest" runat="server" Text="NEW" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnNewG_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+</td>
+<td>
+&nbsp&nbsp&nbsp&nbsp
+</td>
+<td>
+<asp:Button ID="btnToday" runat="server" Text="VISIT" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnToday_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+</td>
+<td>
+&nbsp&nbsp&nbsp&nbsp
+</td>
 
-
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Button ID="btnLogIn" runat="server" Text="LOG IN GUEST" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnLoginG_Click" Width="200px"  style="background-color: #CC0808 ; color: white"/>
-<asp:Button ID="btnNewGuest" runat="server" Text="NEW" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnNewG_Click" Width="200px"  style="background-color: #CC0808 ; color: white"/>
-<asp:Button ID="btnToday" runat="server" Text="TODAY'S VISITOR" CssClass="w3-button w3-block w3-hover-white w3-round-xlarge w3-section w3-padding" OnClick="btnToday_Click" Width="200px"  style="background-color: #CC0808 ; color: white"/>
-
+</tr>
 </asp:Content>

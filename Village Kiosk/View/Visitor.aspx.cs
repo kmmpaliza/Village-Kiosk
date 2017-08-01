@@ -44,7 +44,7 @@ namespace Village_Kiosk.View
         {
             if ((String.IsNullOrEmpty(txtPurpose.Text)) || (String.IsNullOrEmpty(txtMobile.Text)))
             {
-                string alertmessage = "Please Fill up the form";
+                string alertmessage = "Please Fill Up The Form";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + alertmessage + "');", true);
             }
             else

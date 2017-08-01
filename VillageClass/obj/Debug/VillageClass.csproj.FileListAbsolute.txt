@@ -13,3 +13,8 @@ D:\MC\Programs\ASP\backup2\VillageClass\bin\Debug\VillageClass.pdb
 D:\MC\Programs\ASP\backup2\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
 D:\MC\Programs\ASP\backup2\VillageClass\obj\Debug\VillageClass.dll
 D:\MC\Programs\ASP\backup2\VillageClass\obj\Debug\VillageClass.pdb
+C:\Users\chaelamorin\gc\VillageClass\bin\Debug\VillageClass.dll
+C:\Users\chaelamorin\gc\VillageClass\bin\Debug\VillageClass.pdb
+C:\Users\chaelamorin\gc\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
+C:\Users\chaelamorin\gc\VillageClass\obj\Debug\VillageClass.dll
+C:\Users\chaelamorin\gc\VillageClass\obj\Debug\VillageClass.pdb

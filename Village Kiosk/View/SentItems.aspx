@@ -1,19 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="SentItems.aspx.cs" Inherits="Village_Kiosk.View.SentItems" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-<div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px">
- <h3 style="color: #CC0808; font-size:40px">SENT ITEMS</h3>
- <hr style="color: #CC0808; border-width: 5.5px; border-style:solid;"/>
- </div>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-<div style="background-color:rgba(255, 255, 255, 0.85);color:black;padding:20px;">
-
+<br />
+ <div align="center">
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-envelope"></i></font> SENT ITEMS</h3>
+ <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
     <div align="center">
 
 <asp:GridView ID="grdSent" runat="server" BackColor="White" 
         BorderColor="#CC0808" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
-        AllowPaging="True" PageSize="15" DataKeyNames="SentId" AutoGenerateColumns="false"  Width="100%"     
+        AllowPaging="True" PageSize="15" DataKeyNames="SentId" AutoGenerateColumns="false"  Width="73%"  style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"   
            >
            <RowStyle HorizontalAlign="Center" />
 
@@ -31,7 +26,7 @@
         
         </Columns>
         <FooterStyle BackColor="White" ForeColor="#000066" />
-        <HeaderStyle BackColor="#CC0808" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#DAA520" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
         <RowStyle ForeColor="Black" />
         <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />

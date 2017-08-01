@@ -3,31 +3,30 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
-<div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px">
- <h3 style="color: #CC0808; font-size:40px">SEARCH HOMEOWNER</h3>
- <hr style="color: #CC0808; border-width: 5.5px; border-style:solid;"/>
- </div>
-</asp:Content>
+<br />
+   <div align="center">
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-search"></i></font> SEARCH</h3>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<div style="background-color:rgba(255, 255, 255, 0.85);color:black;padding:20px;">
-
-    <div align="center">
-    <asp:TextBox ID="txtSearch" CssClass="searchBar" runat="server" placeholder="SEARCH"></asp:TextBox>
-
-    <tr>
-    <asp:Button ID="btnSearch" CssClass="w3-button  w3-hover-white w3-round-xlarge w3-section " style="background-color: #CC0808 ; color: white" runat="server" Text="SEARCH" 
+ <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
+ <br />
+ <br />
+ <br />
+ <div style="background-color:rgb(146,0,0); color:black;padding-left:155px">
+    <asp:TextBox ID="txtSearch" CssClass="searchBar" runat="server" 
+           placeholder="SEARCH" Width="189px" ></asp:TextBox></div>
+    
+    <asp:Button ID="btnSearch" CssClass="w3-button  w3-hover-khaki w3-round-xlarge w3-section " style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="SEARCH" 
             onclick="btnSearch_Click" Width="150px" />
-    <td><asp:Button ID="btnReset" CssClass="w3-button  w3-hover-white w3-round-xlarge " style="background-color: #CC0808 ; color: white" runat="server" Text="RESET" 
-            onclick="btnReset_Click" Width="126px" /></td> 
+    <td><asp:Button ID="btnReset" CssClass="w3-button  w3-hover-khaki w3-round-xlarge " style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="RESET" 
+            onclick="btnReset_Click" Width="126px" /></td>
     </tr>
     <br />
 
       <asp:GridView ID="grdHomeOwner" runat="server" BackColor="White" 
-          BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+          BorderColor="#000" BorderStyle="None" BorderWidth="1px" 
        AllowPaging="True" PageSize="15"  DataKeyNames="HomeOwnerId" 
        onrowediting="gridHO_Editing" onrowdeleting="gridHO_Deleting" 
-            AutoGenerateColumns="false"   Width="100%" 
+            AutoGenerateColumns="false"   Width="73%"  style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"
               >
 
         <RowStyle HorizontalAlign="Center" Height = "40px" />
@@ -35,6 +34,9 @@
          <Columns>
            <asp:CommandField ShowEditButton="True" ButtonType="Button"/>
             <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
+
+            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" ID="btnEditImage" ImageUrl="~/Images/btnEdit.png" Width="20px" Height="20px" PostBackUrl="EditHomeOwners.aspx" /> </ItemTemplate></asp:TemplateField>
+            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" ID="btnEditImage" ImageUrl="~/Images/btnTrash.png" Width="20px" Height="20px" /> </ItemTemplate></asp:TemplateField>
 
             <asp:TemplateField HeaderText="Homeowner Id">
             <ItemTemplate><asp:Label ID="lblid" runat="server" Text='<%# Eval("HomeOwnerId") %>'></asp:Label></ItemTemplate>
@@ -54,7 +56,7 @@
          </Columns>
 
        <FooterStyle BackColor="White" ForeColor="#000066" />
-        <HeaderStyle BackColor="#CC0808" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#DAA520" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
         <RowStyle ForeColor="Black" />
         <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
