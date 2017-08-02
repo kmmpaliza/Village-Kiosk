@@ -1,33 +1,24 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="SearchHO.aspx.cs" Inherits="Village_Kiosk.View.SearchHO" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="ViewAdmin.aspx.cs" Inherits="Village_Kiosk.View.ViewAdmin" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
 <br />
    <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-search"></i></font> SEARCH</h3>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-user"></i></font> VIEW ADMIN</h3>
 
  <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
  <br />
  <br />
  <br />
  <div style="background-color:rgb(146,0,0); color:black;padding-left:155px">
-    <asp:TextBox ID="txtSearch" CssClass="searchBar" runat="server" 
-           placeholder="SEARCH" Width="189px" ></asp:TextBox></div>
-    
-    <asp:Button ID="btnSearch" CssClass="w3-button  w3-hover-khaki w3-round-xlarge w3-section " style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="SEARCH" 
-            onclick="btnSearch_Click" Width="150px" />
-    <td><asp:Button ID="btnReset" CssClass="w3-button  w3-hover-khaki w3-round-xlarge " style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="RESET" 
-            onclick="btnReset_Click" Width="126px" /></td>
-    </tr>
-    <br />
 
-      <asp:GridView ID="grdHomeOwner" runat="server" BackColor="White" 
+ <asp:GridView ID="grdAdmin" runat="server" BackColor="White" 
           BorderColor="#000" BorderStyle="None" BorderWidth="1px" 
-       AllowPaging="True" PageSize="15"  DataKeyNames="HomeOwnerId" 
-            AutoGenerateColumns="false"   Width="73%" onpageindexchanging="gridHO_IndexChanging"
+       AllowPaging="True" PageSize="15"  DataKeyNames="AdminId" 
+            AutoGenerateColumns="false"   Width="73%" onpageindexchanging="gridAdmin_IndexChanging"
              
-           style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;" onrowcommand="gridHO_RowCommand"
+           style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;" onrowcommand="gridAdmin_RowCommand"
               >
 
         <RowStyle HorizontalAlign="Center" Height = "40px" />
@@ -37,21 +28,19 @@
             <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" OnClick="btnEdit_Click" ID="btnEditImage" CommandName="EditValue" ImageUrl="~/Images/btnEdit.png" Width="20px" Height="20px"  /> </ItemTemplate></asp:TemplateField>
             <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" OnClick="btnDelete_Click" ID="btnDelImage" ImageUrl="~/Images/btnTrash.png" Width="20px" Height="20px" /> </ItemTemplate></asp:TemplateField>
 
-            <asp:TemplateField HeaderText="Homeowner Id">
-            <ItemTemplate><asp:Label ID="lblid" runat="server" Text='<%# Eval("HomeOwnerId") %>'></asp:Label></ItemTemplate>
+            <asp:TemplateField HeaderText="Admin Id">
+            <ItemTemplate><asp:Label ID="lblid" runat="server" Text='<%# Eval("AdminId") %>'></asp:Label></ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Name">
-            <ItemTemplate><asp:Label ID="lblname" runat="server" Text='<%# Eval("HomeOwnerName") %>'></asp:Label></ItemTemplate>
+            <ItemTemplate><asp:Label ID="lblname" runat="server" Text='<%# Eval("AdminName") %>'></asp:Label></ItemTemplate>
             </asp:TemplateField>
-             <asp:TemplateField HeaderText="Tenant Name">
-            <ItemTemplate><asp:Label ID="lbltenant" runat="server" Text='<%# Eval("TenantName") %>'></asp:Label></ItemTemplate>
+             <asp:TemplateField HeaderText="Username">
+            <ItemTemplate><asp:Label ID="lbltenant" runat="server" Text='<%# Eval("AdminUsername") %>'></asp:Label></ItemTemplate>
             </asp:TemplateField>
-             <asp:TemplateField HeaderText="House Number">
-            <ItemTemplate><asp:Label ID="lblhnum" runat="server" Text='<%# Eval("HomeOwnerHouseNumber") %>'></asp:Label></ItemTemplate>
+             <asp:TemplateField HeaderText="Designation">
+            <ItemTemplate><asp:Label ID="lblhnum" runat="server" Text='<%# Eval("AdminDesignation") %>'></asp:Label></ItemTemplate>
             </asp:TemplateField>
-             <asp:TemplateField HeaderText="Contact Number">
-            <ItemTemplate><asp:Label ID="lblcnum" runat="server" Text='<%# Eval("HomeOwnerMobileNumber") %>'></asp:Label></ItemTemplate>
-            </asp:TemplateField>
+           
          </Columns>
 
        <FooterStyle BackColor="White" ForeColor="#000066" />
@@ -66,7 +55,7 @@
      </asp:GridView>
 
 
-     <input id="editClick" type="hidden" name="hddclick" runat="server" />
+       <input id="editClick" type="hidden" name="hddclick" runat="server" />
     <asp:ScriptManager ID = "ScriptManager1" runat="server"> </asp:ScriptManager>
              
              <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" 
@@ -75,7 +64,7 @@
              </asp:ModalPopupExtender>
 
 
-            <asp:Panel ID="Panel1" runat="server" CssClass="modalBackground" Style="display: none">
+   <asp:Panel ID="Panel1" runat="server" CssClass="modalBackground" Style="display: none">
 
     <div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px">
     <asp:Label ID="lblforId" runat="server" Visible="false"></asp:Label>
@@ -92,13 +81,10 @@
     </div>
     </asp:Panel>
 
-    </div>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+ </div>
+ </div>
 
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 </asp:Content>

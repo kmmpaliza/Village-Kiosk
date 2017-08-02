@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using VillageClass;
+using System.Linq;
 
 
 namespace Village_Kiosk.View
@@ -16,7 +17,8 @@ namespace Village_Kiosk.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
+              
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
@@ -41,8 +43,7 @@ namespace Village_Kiosk.View
             else
             {
 
-                name = txtname.Text;
-                username = txtusername.Text;
+
                 answer = txtAnswer.Text;
                 designation = drpDesignation.SelectedItem.Text;
                 question = drpQuestion.SelectedItem.Text;
@@ -56,7 +57,7 @@ namespace Village_Kiosk.View
                     password = txtPassword.Text;
                 }
 
-                admin.insertAdmin(name, username, designation, question, answer, password);
+                admin.insertAdmin(txtname.Text, txtusername.Text, designation, question, answer, password);
                 message = "Admin added";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
 
@@ -76,7 +77,20 @@ namespace Village_Kiosk.View
             txtAnswer.Enabled = true;
         }
 
+        protected void Fullname_Changed(object sender, EventArgs e)
+        {
+            Random random = new Random();
 
+            for (int i = 0; i < 2; i++)
+            {
+                username = txtname.Text.Substring(txtname.Text.LastIndexOf(' ') + 1) + (Convert.ToString(random.Next(10, 200)));
+
+            }
+            string forUsername = username;
+            txtusername.Text = forUsername;
+        }
+
+     
      
     }
 }

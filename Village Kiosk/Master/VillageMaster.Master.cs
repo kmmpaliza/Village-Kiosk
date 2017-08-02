@@ -45,7 +45,8 @@ namespace Village_Kiosk.Master
             {
                 Fourth.Attributes.Add("class", "active");
             }
-            else if (activepage.Contains("AdminDashboard.aspx"))
+            else if (activepage.Contains("AdminDashboard.aspx") || activepage.Contains("EditAdmin.aspx")
+                || activepage.Contains("ViewAdmin.aspx") || activepage.Contains("OptionAdmin.aspx"))
             {
                 Five.Attributes.Add("class", "active");
             }

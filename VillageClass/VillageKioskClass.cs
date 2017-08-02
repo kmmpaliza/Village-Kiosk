@@ -18,6 +18,33 @@ namespace VillageClass
         #endregion
 
         #region Admin
+
+        public DataSet selectAdmin()
+        {
+            SqlCommand cmd = new SqlCommand("selectadmin", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            ds.Clear();
+            da.Fill(ds, "selectAdmin");
+            return ds;
+        }
+
+        public void updateAdmin(string id, string name, string username, string designation, string question, string answer, string password){
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("updateAdmin", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@AdminId", SqlDbType.VarChar).Value = id;
+            cmd.Parameters.Add("@AdminName", SqlDbType.VarChar).Value = name;
+            cmd.Parameters.Add("@AdminUsername", SqlDbType.VarChar).Value = username;
+            cmd.Parameters.Add("@AdminDesignation", SqlDbType.VarChar).Value = designation;
+            cmd.Parameters.Add("@AdminQuestion", SqlDbType.VarChar).Value = question;
+            cmd.Parameters.Add("@AdminAnswer", SqlDbType.VarChar).Value = answer;
+            cmd.Parameters.Add("@AdminPassword", SqlDbType.VarChar).Value = password;
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
         public void insertAdmin(string name, string username, string designation, string question, string answer, string password)
         {
             conn.Open();
@@ -74,6 +101,28 @@ namespace VillageClass
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             ds.Clear();
             da.Fill(ds, "searchAdmin");
+            conn.Close();
+            return ds;
+        }
+
+        public void deleteAdmin(string id)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("deleteAdmin", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@AdminId", SqlDbType.VarChar).Value = id;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public DataSet getAdmin(string id)
+        {
+            SqlCommand cmd = new SqlCommand("getAdmin", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@AdminId", SqlDbType.VarChar).Value = id;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            ds.Clear();
+            da.Fill(ds, "getAdmin");
             conn.Close();
             return ds;
         }

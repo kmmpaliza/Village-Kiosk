@@ -44,6 +44,20 @@ namespace Village_Kiosk.View
 
         }
 
+        protected void drpChoose_Changed(object sender, EventArgs e)
+        {
+            if (drpChoose.SelectedItem.Text == "Today's Visitor/s")
+            {
+                grdVisitor.DataSource = visitor.selectVisitor().Tables["selectVisitor"];
+                grdVisitor.DataBind();
+            }
+            else if (drpChoose.SelectedItem.Text == "Visitor/s")
+            {
+                grdVisitor.DataSource = visitor.getLogoutVisitor("").Tables["checkLogOutGuest"];
+                grdVisitor.DataBind();
+            }
+        }
+
         
 
         

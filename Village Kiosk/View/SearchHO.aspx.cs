@@ -12,7 +12,7 @@ namespace Village_Kiosk.View
     public partial class SearchHO : System.Web.UI.Page
     {
         VillageKioskClass homeOwner = new VillageKioskClass();
-        DataSet ds = new DataSet();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {

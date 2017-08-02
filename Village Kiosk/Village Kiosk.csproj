@@ -127,6 +127,7 @@
     <Content Include="Themes\vendor\jquery\jquery.js" />
     <Content Include="Themes\vendor\jquery\jquery.min.js" />
     <Content Include="View\AdminDashboard.aspx" />
+    <Content Include="View\EditAdmin.aspx" />
     <Content Include="View\EditGuest.aspx" />
     <Content Include="View\EditHomeOwners.aspx" />
     <Content Include="View\Guest.aspx" />
@@ -135,6 +136,7 @@
     <Content Include="View\Logs.aspx" />
     <Content Include="View\MessageAll.aspx" />
     <Content Include="View\MessageBoard.aspx" />
+    <Content Include="View\OptionAdmin.aspx" />
     <Content Include="View\OptionsGuest.aspx" />
     <Content Include="View\OptionsHomeOwner.aspx" />
     <Content Include="View\OptionsMessage.aspx" />
@@ -144,8 +146,8 @@
     <Content Include="View\SearchHO.aspx" />
     <Content Include="View\SentItems.aspx" />
     <Content Include="View\TodaysVisitorList.aspx" />
+    <Content Include="View\ViewAdmin.aspx" />
     <Content Include="View\Visitor.aspx" />
-    <Content Include="View\VisitorsLogout.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -183,6 +185,13 @@
     </Compile>
     <Compile Include="View\AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditAdmin.aspx.cs">
+      <DependentUpon>EditAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditAdmin.aspx.designer.cs">
+      <DependentUpon>EditAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\EditGuest.aspx.cs">
       <DependentUpon>EditGuest.aspx</DependentUpon>
@@ -239,6 +248,13 @@
     </Compile>
     <Compile Include="View\MessageBoard.aspx.designer.cs">
       <DependentUpon>MessageBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\OptionAdmin.aspx.cs">
+      <DependentUpon>OptionAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\OptionAdmin.aspx.designer.cs">
+      <DependentUpon>OptionAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\OptionsGuest.aspx.cs">
       <DependentUpon>OptionsGuest.aspx</DependentUpon>
@@ -303,19 +319,19 @@
     <Compile Include="View\TodaysVisitorList.aspx.designer.cs">
       <DependentUpon>TodaysVisitorList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewAdmin.aspx.cs">
+      <DependentUpon>ViewAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ViewAdmin.aspx.designer.cs">
+      <DependentUpon>ViewAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Visitor.aspx.cs">
       <DependentUpon>Visitor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Visitor.aspx.designer.cs">
       <DependentUpon>Visitor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\VisitorsLogout.aspx.cs">
-      <DependentUpon>VisitorsLogout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\VisitorsLogout.aspx.designer.cs">
-      <DependentUpon>VisitorsLogout.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

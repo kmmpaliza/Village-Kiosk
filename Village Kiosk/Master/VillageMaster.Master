@@ -95,7 +95,7 @@
                         <a href="../View/Schedule.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-clock-o"></i></font><font size="5px" ; font face="Trebuchet MS"> Schedule</font></a>
                     </li>
                     <li ID="Five" runat="server">
-                        <a href="../View/AdminDashboard.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-user"></i></font><font size="5px" ; font face="Trebuchet MS"> Admin</font></a>
+                        <a href="../View/OptionAdmin.aspx"><font color= "#D4AF37" ; font size="5px"><i class="fa fa-user"></i></font><font size="5px" ; font face="Trebuchet MS"> Admin</font></a>
                     </li>
 
                   <!--  <li>

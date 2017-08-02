@@ -83,7 +83,7 @@
              </asp:ModalPopupExtender>
 
 
-            <asp:Panel ID="Panel1" runat="server" CssClass="modalBackground">
+            <asp:Panel ID="Panel1" runat="server" CssClass="modalBackground" Style="display: none">
 
     <div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px">
     <asp:Label ID="lblforId" runat="server" Visible="false"></asp:Label>

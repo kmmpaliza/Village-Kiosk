@@ -23,17 +23,12 @@
 &nbsp&nbsp&nbsp&nbsp
 </td>
 <td>
-<asp:Button ID="btnToday" runat="server" Text="TODAY'S VISIT" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnToday_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+<asp:Button ID="btnToday" runat="server" Text="VISITOR/S" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnToday_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
 </td>
 <td>
 &nbsp&nbsp&nbsp&nbsp
 </td>
-<td>
-<asp:Button ID="btnVisit" runat="server" Text="VISIT" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnVisit_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
-</td>
-<td>
-&nbsp&nbsp&nbsp&nbsp
-</td>
+
 <td>
 <asp:Button ID="btnSearch" runat="server" Text="SEARCH" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnSearch_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
 </td>

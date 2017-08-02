@@ -8,13 +8,24 @@
  <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
  <br />
 
+     <asp:DropDownList ID="drpChoose" AppendDataBoundItems="true" 
+              runat="server" CssClass="w3-input w3-border w3-margin-bottom" 
+            style="text-align:center; border-color:#000080" Width="600px" 
+            AutoPostBack="True" onselectedindexchanged="drpChoose_Changed" >
+          <asp:ListItem Text="Today's Visitor/s" Value="1" />
+          <asp:ListItem Text="Visitor/s" Value="2" />
+          </asp:DropDownList>
+
       <asp:GridView ID="grdVisitor" runat="server" BackColor="White" 
         BorderColor="#000" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
         AllowPaging="True" PageSize="15" width="73%" DataKeyNames="VisitorId"
-        AutoGenerateColumns="false" onrowediting="grdVisitor_Editing"  onpageindexchanging="grdVisitor_IndexChanging"  style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;"  
-       >
-       <RowStyle HorizontalAlign="Center" />
+        AutoGenerateColumns="false" onrowediting="grdVisitor_Editing" 
+         onpageindexchanging="grdVisitor_IndexChanging" 
+          style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;" >
+     
        
+       <RowStyle HorizontalAlign="Center" Height = "40px" />
+
         <Columns>
             <asp:CommandField ShowEditButton="True" ButtonType="Button" EditText= "Time Out"/>
             <asp:TemplateField HeaderText="Visitor Id">
@@ -52,4 +63,5 @@
         <SortedDescendingHeaderStyle BackColor="#00547E" />
     </asp:GridView>
 
+    </div>
 </asp:Content>
