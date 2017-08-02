@@ -87,6 +87,35 @@ namespace Village_Kiosk.View
              txtMobile.Text = visitor.getPersonToVisitInfo().Tables["guestHomeOwner"].Rows[index][1].ToString();
         }
 
+        protected void drpPurpose_Selected(object sender, EventArgs e)
+        {
+            if (drpPurpose.SelectedItem.Text == "Select Purpose:")
+            {
+                string message = "Pls. select purpose";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
+            }
+            else if (drpPurpose.SelectedItem.Text == "Regular Visit")
+            {
+                txtPurpose.Text = "Regular Visit";
+                txtPurpose.Enabled = false;
+            }
+            else if (drpPurpose.SelectedItem.Text == "Celebration")
+            {
+                txtPurpose.Text = "Celebration";
+                txtPurpose.Enabled = false;
+            }
+            else if (drpPurpose.SelectedItem.Text == "Subdivision Event")
+            {
+                txtPurpose.Text = "Subdivision Event";
+                txtPurpose.Enabled = false;
+            }
+            else if (drpPurpose.SelectedItem.Text == "Others")
+            {
+                txtPurpose.Enabled = true;
+                txtPurpose.Text = "";
+            }
+        }
+
         
 
     }

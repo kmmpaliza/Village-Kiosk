@@ -23,7 +23,15 @@
             </asp:DropDownList>
 
            <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Reason of Visit</b></label>
-           <asp:TextBox ID="txtPurpose" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px"></asp:TextBox>
+           <br />
+           <asp:DropDownList ID="drpPurpose" runat="server" Width="350px" Height="30px"  AutoPostBack="true"
+            onselectedindexchanged="drpPurpose_Selected">
+            <asp:ListItem Text="Select Purpose:" Value="0"></asp:ListItem>
+            <asp:ListItem Text="Regular Visit" Value="1">
+            </asp:ListItem><asp:ListItem Text="Celebration" Value="2">
+            </asp:ListItem><asp:ListItem Text="Subdivision Event" Value="3">
+            </asp:ListItem><asp:ListItem Text="Others" Value="4"></asp:ListItem></asp:DropDownList>
+           <asp:TextBox ID="txtPurpose" runat="server" Enabled="false" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px"></asp:TextBox>
 
            <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold" placeholder = "09xxxxxxxxx"><b>Mobile Number</b></label>
            <asp:TextBox ID="txtMobile" Enabled="false" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" ></asp:TextBox>

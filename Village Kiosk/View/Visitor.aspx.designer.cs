@@ -40,6 +40,15 @@ namespace Village_Kiosk.View {
         protected global::System.Web.UI.WebControls.DropDownList drpPSV;
         
         /// <summary>
+        /// drpPurpose control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpPurpose;
+        
+        /// <summary>
         /// txtPurpose control.
         /// </summary>
         /// <remarks>
