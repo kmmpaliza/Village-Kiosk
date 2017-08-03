@@ -16,7 +16,7 @@
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Homeowner's Name</b></label>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Invalid"  ForeColor = "Red" ControlToValidate="txtHomeOwnerName" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Please Input Valid Name"  ForeColor = "Red" ControlToValidate="txtHomeOwnerName" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
           
           <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtHomeOwnerName" ID="RegularExpressionValidator1" ValidationExpression = "^[\s\S]{0,40}$" runat="server" ForeColor = "Red" ErrorMessage="Maximum of 40 Characters Only"></asp:RegularExpressionValidator>
 
@@ -39,7 +39,7 @@
             
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>House Number</b></label>
           
-          <asp:TextBox ID="txtHomeOwnerHouseNumber" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Lot / Block / Phase" ></asp:TextBox>
+          <asp:TextBox ID="txtHomeOwnerHouseNumber" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "House No. / Blk / Street" ></asp:TextBox>
           
           <asp:RequiredFieldValidator 
              id="RequiredFieldValidator3" runat="server" 
@@ -49,7 +49,7 @@
             </asp:RequiredFieldValidator>
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Mobile Number</b></label>
           
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Invalid" ControlToValidate="txtHomeOwnerMobile" ValidationExpression="^09[0-9][0-9]{8}$" ForeColor = "Red"></asp:RegularExpressionValidator>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Please Input Valid Number" ControlToValidate="txtHomeOwnerMobile" ValidationExpression="^09[0-9][0-9]{8}$" ForeColor = "Red"></asp:RegularExpressionValidator>
           
           <asp:TextBox ID="txtHomeOwnerMobile" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "09xxxxxxxxx"></asp:TextBox>
            <asp:HyperLink ID="lnkTwilio" runat="server" NavigateUrl="https://www.twilio.com/login?g=%2Fconsole&t=269b703bb7bfd748412c1252bff6e4fc26321203dc2ea1a50ed8c44644980a24" Text="Twilio Console" Target="_blank"></asp:HyperLink>

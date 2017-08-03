@@ -27,7 +27,7 @@
        <RowStyle HorizontalAlign="Center" Height = "40px" />
 
         <Columns>
-            <asp:CommandField ShowEditButton="True" ButtonType="Button" EditText= "Time Out"/>
+            <asp:CommandField ShowEditButton="True" ButtonType="Button" EditText= "Log Out"/>
             <asp:TemplateField HeaderText="Visitor Id">
             <ItemTemplate><asp:Label ID="lblid" runat="server" Text='<%# Eval("VisitorId") %>'></asp:Label></ItemTemplate>
             </asp:TemplateField>

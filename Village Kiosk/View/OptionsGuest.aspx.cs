@@ -34,6 +34,10 @@ namespace Village_Kiosk.View
             Response.Redirect("SearchGuest.aspx");
         }
 
+       
+
+        
+
      
 
     }

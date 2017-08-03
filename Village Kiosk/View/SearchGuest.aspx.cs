@@ -16,13 +16,13 @@ namespace Village_Kiosk.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            /*if (!IsPostBack)
             {
                 grdSearch.DataSource = search.selectGuest().Tables["selectGuest"];
                 grdSearch.DataBind();
 
-                ModalPopupExtender1.Hide();
-            }
+                
+            }*/
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -36,14 +36,16 @@ namespace Village_Kiosk.View
             {
                 grdSearch.DataSource = search.searchGuest(txtSearch.Text).Tables["searchGuest"];
                 grdSearch.DataBind();
+                grdSearch.Visible = true;
             }
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
             txtSearch.Text = "";
-            grdSearch.DataSource = search.selectGuest().Tables["selectGuest"];
-            grdSearch.DataBind();
+            grdSearch.Visible = false;
+           /* grdSearch.DataSource = search.selectGuest().Tables["selectGuest"];
+            grdSearch.DataBind();*/
         }
 
         

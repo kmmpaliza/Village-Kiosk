@@ -17,6 +17,50 @@ namespace VillageClass
         private static SqlConnection conn = new SqlConnection(constring);
         #endregion
 
+        #region Events
+        public void insertEvent(string title, string desc, string date)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("insertEvent", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@EventTitle", SqlDbType.VarChar).Value = title;
+            cmd.Parameters.Add("@EventDesc", SqlDbType.VarChar).Value = desc;
+            cmd.Parameters.Add("@EventDate", SqlDbType.VarChar).Value = date;
+
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public DataSet selectEvent()
+        {
+            SqlCommand cmd = new SqlCommand("selectEvent", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            ds.Clear();
+            da.Fill(ds, "selectEvent");
+            conn.Close();
+            return ds;
+        }
+
+
+        public DataSet getEvents(string eventtitle)
+        {
+            SqlCommand cmd = new SqlCommand("getDetails", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@EventTitle", SqlDbType.VarChar).Value = eventtitle;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            ds.Clear();
+            da.Fill(ds, "getDetails");
+            conn.Close();
+            return ds;
+        }
+
+
+        #endregion
+
+
+
+
         #region Admin
 
         public DataSet selectAdmin()

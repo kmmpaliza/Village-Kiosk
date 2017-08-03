@@ -15,9 +15,9 @@
     <asp:TextBox ID="txtSearch" CssClass="searchBar" runat="server" 
            placeholder="SEARCH" Width="189px" ></asp:TextBox></div>
     
-    <asp:Button ID="btnSearch" CssClass="w3-button  w3-hover-khaki w3-round-xlarge w3-section " style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="SEARCH" 
+    <asp:Button ID="btnSearch" CssClass="w3-button  w3-hover-khaki w3-round-xlarge w3-section " style="background-color: #CC0808 ; color: white; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="SEARCH" 
             onclick="btnSearch_Click" Width="150px" />
-    <td><asp:Button ID="btnReset" CssClass="w3-button  w3-hover-khaki w3-round-xlarge " style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="RESET" 
+    <td><asp:Button ID="btnReset" CssClass="w3-button  w3-hover-khaki w3-round-xlarge " style="background-color: #CC0808 ; color: white; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="RESET" 
             onclick="btnReset_Click" Width="126px" /></td>
     </tr>
     <br />

@@ -16,13 +16,13 @@ namespace Village_Kiosk.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           if (!IsPostBack)
+           /*if (!IsPostBack)
            {
 
                grdHomeOwner.DataSource = homeOwner.selectHomeOwner().Tables["selectHomeOwner"];
                grdHomeOwner.DataBind();
 
-           }
+           }*/
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -36,14 +36,16 @@ namespace Village_Kiosk.View
             {
                 grdHomeOwner.DataSource = homeOwner.searchHomeowner(txtSearch.Text).Tables["searchHomeowner"];
                 grdHomeOwner.DataBind();
+                grdHomeOwner.Visible = true;
             }
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
             txtSearch.Text = "";
-            grdHomeOwner.DataSource = homeOwner.selectHomeOwner().Tables["selectHomeOwner"];
-            grdHomeOwner.DataBind();
+            grdHomeOwner.Visible = false;
+            /*grdHomeOwner.DataSource = homeOwner.selectHomeOwner().Tables["selectHomeOwner"];
+            grdHomeOwner.DataBind();*/
         }
 
        

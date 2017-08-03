@@ -11,7 +11,7 @@
  <br />
  <br />
  <br />
- <div style="background-color:rgb(146,0,0); color:black;padding-left:155px">
+ 
 
  <asp:GridView ID="grdAdmin" runat="server" BackColor="White" 
           BorderColor="#000" BorderStyle="None" BorderWidth="1px" 

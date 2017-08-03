@@ -15,12 +15,12 @@
  <div style="background-color:rgb(146,0,0); color:black;padding-left:155px">
 
     <asp:TextBox ID="txtSearch" CssClass="searchBar" runat="server" placeholder="SEARCH"></asp:TextBox>
-
+     </div>
     <tr>
-    <asp:Button ID="btnSearch" CssClass="w3-button  w3-hover-white w3-round-xlarge w3-section " style="background-color: #CC0808 ; color: white" runat="server" Text="SEARCH" 
-            onclick="btnSearch_Click" Width="150px" />
+    <asp:Button ID="btnSearch"  runat="server" CssClass="w3-button  w3-hover-white w3-round-xlarge w3-section " style="background-color: #CC0808 ; color: white; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" Text="SEARCH"
+            onclick="btnSearch_Click" Width="150px"/>
     <td><asp:Button ID="btnReset" CssClass="w3-button  w3-hover-white w3-round-xlarge " 
-            style="background-color: #CC0808; color: white; height: 38px;" runat="server" Text="RESET" 
+            style="background-color: #CC0808 ; color: white; font-size: 15px; font-family: Trebuchet MS; font-weight: bold" runat="server" Text="RESET" 
             onclick="btnReset_Click" Width="126px" /></td> 
     </tr>
     <br />
@@ -64,7 +64,7 @@
         </Columns>
      
         <FooterStyle BackColor="White" ForeColor="#000066" />
-        <HeaderStyle BackColor="#CC0808" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#DAA520" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
         <RowStyle ForeColor="Black" />
         <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
@@ -101,7 +101,7 @@
     </asp:Panel>
     
 
-    </div>
+   
 
 
 

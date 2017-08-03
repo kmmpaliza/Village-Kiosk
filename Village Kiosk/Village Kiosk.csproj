@@ -127,6 +127,7 @@
     <Content Include="Themes\vendor\jquery\jquery.js" />
     <Content Include="Themes\vendor\jquery\jquery.min.js" />
     <Content Include="View\AdminDashboard.aspx" />
+    <Content Include="View\Details.aspx" />
     <Content Include="View\EditAdmin.aspx" />
     <Content Include="View\EditGuest.aspx" />
     <Content Include="View\EditHomeOwners.aspx" />
@@ -185,6 +186,13 @@
     </Compile>
     <Compile Include="View\AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\EditAdmin.aspx.cs">
       <DependentUpon>EditAdmin.aspx</DependentUpon>
