@@ -56,30 +56,36 @@ namespace Village_Kiosk.Master
         {
             if (logout.checkLogoutGuest(""))
             {
-                Response.Redirect("TodaysVisitorList.aspx");
-                 string script = "alert(\"There guest that didn't logged out.\");";
-                    ScriptManager.RegisterStartupScript(this, GetType(),
-                                          "ServerControlScript", script, true);
+
+                ModalPopupExtender1.Show();
                     
                     
             }
             else{
 
                 Response.Redirect("Login.aspx", false);
+                HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                HttpContext.Current.Response.Cache.SetNoServerCaching();
+                HttpContext.Current.Response.Cache.SetNoStore();
+                Session.Abandon();
+
                 int id = logout.selectLogin();
                 logout.updateLogin(id, DateTime.Now.ToString());
-                Session.Clear();
-                Session.Abandon();
-                Session.RemoveAll();
-                Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
-                Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                Response.Cache.SetNoStore();
-                System.Web.Security.FormsAuthentication.SignOut();
                
             }
 
-            
-               
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx", false);
+            HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            HttpContext.Current.Response.Cache.SetNoServerCaching();
+            HttpContext.Current.Response.Cache.SetNoStore();
+            Session.Abandon();
+
+            int id = logout.selectLogin();
+            logout.updateLogin(id, DateTime.Now.ToString());
         }
     }
 }

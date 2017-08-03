@@ -65,7 +65,6 @@ namespace Village_Kiosk.View
             GridViewRow row = (GridViewRow)imgbtn.NamingContainer;
             string id = this.grdSearch.DataKeys[row.RowIndex].Value.ToString();
             search.deleteGuest(id);
-            Response.Redirect("SearchGuest.aspx");
         }
 
         protected void gridGuest_IndexChanging(object sender, GridViewPageEventArgs e)
@@ -103,6 +102,33 @@ namespace Village_Kiosk.View
             {
                 
                 ModalPopupExtender1.Show();
+            }
+            if (e.CommandName == "DelValue")
+            {
+
+                ModalPopupExtender2.Show();
+            }
+        }
+
+        protected void btnSubmit2_Click(object sender, EventArgs e)
+        {
+            string id = lblforId.Text;
+            if ((String.IsNullOrEmpty(txtusr.Text)) || (String.IsNullOrEmpty(txtpass.Text)))
+            {
+                string message = "Please Login.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
+            }
+
+            if (search.CheckUser(txtusr.Text, txtpass.Text))
+            {
+                Response.Redirect("SearchGuest.aspx");
+            }
+            else
+            {
+                string msg = "Invalid username or password.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + msg + "');", true);
+                txtPassword.Text = "";
+                txtUsername.Text = "";
             }
         }
         

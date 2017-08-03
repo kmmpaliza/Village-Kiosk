@@ -32,6 +32,12 @@ namespace Village_Kiosk.View
 
                 ModalPopupExtender1.Show();
             }
+
+            if (e.CommandName == "DelValue")
+            {
+
+                ModalPopupExtender2.Show();
+            }
         }
 
         protected void gridAdmin_IndexChanging(object sender, GridViewPageEventArgs e)
@@ -57,7 +63,6 @@ namespace Village_Kiosk.View
             GridViewRow row = (GridViewRow)imgbtn.NamingContainer;
             string id = Convert.ToString(this.grdAdmin.DataKeys[row.RowIndex].Value);
             admin.deleteAdmin(id);
-            Response.Redirect("ViewAdmin.aspx");
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -72,6 +77,28 @@ namespace Village_Kiosk.View
             if (admin.CheckUser(txtUsername.Text, txtPassword.Text))
             {
                 Response.Redirect("EditAdmin.aspx?id=" + id);
+            }
+            else
+            {
+                string msg = "Invalid username or password.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + msg + "');", true);
+                txtPassword.Text = "";
+                txtUsername.Text = "";
+            }
+        }
+
+        protected void btnSubmit2_Click(object sender, EventArgs e)
+        {
+            string id = lblforId.Text;
+            if ((String.IsNullOrEmpty(txtusr.Text)) || (String.IsNullOrEmpty(txtpass.Text)))
+            {
+                string message = "Please Login.";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
+            }
+
+            if (admin.CheckUser(txtusr.Text, txtpass.Text))
+            {
+                Response.Redirect("ViewAdmin.aspx");
             }
             else
             {

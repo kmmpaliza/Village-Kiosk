@@ -16,7 +16,7 @@ namespace Village_Kiosk.View
 {
     public partial class Visitor : System.Web.UI.Page
     {
-        string name, person, reason, mobile, timein, timeout;
+        string name, person, reason, mobile, timein;
         VillageKioskClass visitor = new VillageKioskClass();
 
         protected void Page_Load(object sender, EventArgs e)

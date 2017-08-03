@@ -56,7 +56,7 @@ namespace Village_Kiosk.View
             }
 
             else if ((String.IsNullOrEmpty(txtGuestName.Text)) || (String.IsNullOrEmpty(txtGuestMobile.Text)) ||
-                (drpMun.SelectedIndex == 0) || (String.IsNullOrEmpty(txtHouseNo.Text)) || (String.IsNullOrEmpty(txtBarangay.Text)))
+                (String.IsNullOrEmpty(txtMuni.Text)) || (String.IsNullOrEmpty(txtHouseNo.Text)) || (String.IsNullOrEmpty(txtBarangay.Text)))
             {
                 string message = "Please Fill Up The Form";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
@@ -71,7 +71,7 @@ namespace Village_Kiosk.View
                 guestname = txtGuestName.Text;
                 guestcontact = txtGuestMobile.Text;
 
-                guest.saveGuest(guestname, guestcontact, txtHouseNo.Text, txtBarangay.Text, drpMun.SelectedItem.Text, imagePath);
+                guest.saveGuest(guestname, guestcontact, txtHouseNo.Text, txtBarangay.Text, txtMuni.Text, imagePath);
 
                 string activitylog = "Add guest";
                 guest.saveLog(guestname, DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString(), activitylog);
@@ -80,7 +80,7 @@ namespace Village_Kiosk.View
                 txtGuestMobile.Text = String.Empty;
                 txtBarangay.Text = String.Empty;
                 txtHouseNo.Text = String.Empty;
-                drpMun.SelectedIndex = 0;
+                txtMuni.Text = String.Empty;
             }
         }
 

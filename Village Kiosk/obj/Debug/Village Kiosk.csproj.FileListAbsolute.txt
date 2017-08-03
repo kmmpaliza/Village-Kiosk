@@ -92,3 +92,15 @@ C:\Users\chaelamorin\gc\Village Kiosk\bin\Twilio.xml
 C:\Users\chaelamorin\gc\Village Kiosk\obj\Debug\Village Kiosk.csprojResolveAssemblyReference.cache
 C:\Users\chaelamorin\gc\Village Kiosk\obj\Debug\Village Kiosk.dll
 C:\Users\chaelamorin\gc\Village Kiosk\obj\Debug\Village Kiosk.pdb
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\Village Kiosk.dll
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\Village Kiosk.pdb
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\JWT.dll
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\Newtonsoft.Json.dll
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\Twilio.dll
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\VillageClass.dll
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\VillageClass.pdb
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\Newtonsoft.Json.xml
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\bin\Twilio.xml
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\obj\Debug\Village Kiosk.csprojResolveAssemblyReference.cache
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\obj\Debug\Village Kiosk.dll
+C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\obj\Debug\Village Kiosk.pdb

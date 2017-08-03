@@ -8,7 +8,12 @@
  <hr style="color: #FAFAD2; border-width: 5.5px; width: 800px; border-style:outset;"/>
  <br />
           <asp:Label id="visitorForId" runat="server" Visible="False"></asp:Label>
-
+           <asp:RequiredFieldValidator 
+             id="RequiredFieldValidator3" runat="server" 
+             ErrorMessage="*" 
+             ControlToValidate="drpVisitorName"
+             ForeColor = "Red">
+            </asp:RequiredFieldValidator>
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Visitor's Name</b></label>
          <asp:DropDownList ID="drpVisitorName" runat="server" 
             CssClass="w3-input w3-border w3-margin-bottom" 
@@ -22,6 +27,12 @@
             AutoPostBack="True" onselectedindexchanged="drpPSV_selected" >
             </asp:DropDownList>
 
+            <asp:RequiredFieldValidator 
+             id="RequiredFieldValidator1" runat="server" 
+             ErrorMessage="*" 
+             ControlToValidate="drpPurpose"
+             ForeColor = "Red">
+            </asp:RequiredFieldValidator>
            <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Reason of Visit</b></label>
            <br />
            <asp:DropDownList ID="drpPurpose" runat="server" Width="350px" Height="30px"  AutoPostBack="true"

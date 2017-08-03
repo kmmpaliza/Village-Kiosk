@@ -42,7 +42,7 @@
 
             <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" OnClick="btnEdit_Click" ID="btnEditImage" ImageUrl="~/Images/btnEdit.png" Width="20px" Height="20px" CommandName="EditValue" /> 
             </ItemTemplate></asp:TemplateField>
-            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" OnClick="btnDelete_Click" ID="btnDelImage" ImageUrl="~/Images/btnTrash.png" Width="20px" Height="20px" /> </ItemTemplate></asp:TemplateField>
+            <asp:TemplateField> <ItemTemplate> <asp:ImageButton runat="server" OnClick="btnDelete_Click" ID="btnDelImage" ImageUrl="~/Images/btnTrash.png" Width="20px" Height="20px" CommandName="DelValue" /> </ItemTemplate></asp:TemplateField>
 
             <asp:TemplateField HeaderText="Guest Id">
             <ItemTemplate><asp:Label ID="lblid" runat="server" Text='<%# Eval("GuestId") %>'></asp:Label></ItemTemplate>
@@ -75,7 +75,6 @@
     </asp:GridView>
 
     <input id="editClick" type="hidden" name="hddclick" runat="server" />
-    <asp:ScriptManager ID = "ScriptManager1" runat="server"> </asp:ScriptManager>
              
              <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" 
                        PopupControlID="Panel1" CancelControlID="btnCancel" 
@@ -102,7 +101,30 @@
     
 
    
+    <input id="hideId" type="hidden" name="hddclick" runat="server" />
+             
+             <asp:ModalPopupExtender ID="ModalPopupExtender2" runat="server" 
+                       PopupControlID="Panel2" CancelControlID="btnCancel2" 
+                       TargetControlID="hideId" BackgroundCssClass="modalBackground" Drag="true">
+             </asp:ModalPopupExtender>
 
+
+            <asp:Panel ID="Panel2" runat="server" CssClass="modalBackground" Style="display: none">
+
+    <div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px">
+    <asp:Label ID="lblId" runat="server" Visible="false"></asp:Label>
+    <asp:Label ID="lbluser" runat ="server"> USERNAME: </asp:Label><br />
+    <asp:TextBox ID="txtusr" runat="server" placeholder="Type your username"></asp:TextBox><br />
+    <asp:Label ID="lblpass" runat ="server"> PASSWORD: </asp:Label><br />
+    <asp:TextBox ID="txtpass" runat="server" placeholder="Type your password" TextMode="Password"></asp:TextBox>
+    <br />
+    <br />
+    <asp:Button ID="btnSub2" runat="server" Text="Submit" OnClick="btnSubmit2_Click" CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="300px"  />
+    <br />
+    <asp:Button ID="btnCancel2" runat="server" Text="Cancel" CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="300px"  />
+    <br />
+    </div>
+    </asp:Panel>
 
 
 <br />

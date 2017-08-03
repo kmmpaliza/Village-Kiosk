@@ -13,8 +13,8 @@
              ControlToValidate="txtGuestName"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Guest's Name</b></label>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Invalid"  ForeColor = "Red" ControlToValidate="txtGuestName" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Guest's Name</b></label><br />
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Please Input Valid Name"  ForeColor = "Red" ControlToValidate="txtGuestName" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
           
           <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtGuestName" ID="RegularExpressionValidator1" ValidationExpression = "^[\s\S]{0,40}$" runat="server" ForeColor = "Red" ErrorMessage="Maximum of 40 Characters Only"></asp:RegularExpressionValidator>
 
@@ -26,24 +26,36 @@
              ControlToValidate="txtGuestName"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Mobile Number</b></label>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Invalid" ControlToValidate="txtGuestMobile" ValidationExpression="^09[0-9][0-9]{8}$" ForeColor = "Red"></asp:RegularExpressionValidator>
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Mobile Number</b></label><br />
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Please Input Valid Number" ControlToValidate="txtGuestMobile" ValidationExpression="^09[0-9][0-9]{8}$" ForeColor = "Red"></asp:RegularExpressionValidator>
           <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "09xxxxxxxxx"></asp:TextBox>
           
+          <asp:RequiredFieldValidator 
+             id="RequiredFieldValidator4" runat="server" 
+             ErrorMessage="*" 
+             ControlToValidate="txtHouseNo"
+             ForeColor = "Red">
+            </asp:RequiredFieldValidator>
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Address</b></label>
           <asp:TextBox ID="txtHouseNo" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "House No. / Blk / Street"></asp:TextBox>
-
+          <asp:RequiredFieldValidator 
+             id="RequiredFieldValidator3" runat="server" 
+             ErrorMessage="*" 
+             ControlToValidate="txtBarangay"
+             ForeColor = "Red">
+            </asp:RequiredFieldValidator>
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Barangay</b></label>
           <asp:TextBox ID="txtBarangay" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Barangay"></asp:TextBox>
           
+
+            <asp:RequiredFieldValidator 
+             id="RequiredFieldValidator5" runat="server" 
+             ErrorMessage="*" 
+             ControlToValidate="txtMuni"
+             ForeColor = "Red">
+            </asp:RequiredFieldValidator>
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>City/Municipality</b></label><br />
-          <asp:DropDownList ID="drpMun" runat="server" Width="350px" Height="30px"  AutoPostBack="true"
-         >
-            <asp:ListItem Enabled="true" Text="Select Municipality:" Value="0">
-            </asp:ListItem><asp:ListItem Text="Bacoor" Value="1">
-            </asp:ListItem><asp:ListItem Text="Carmona" Value="2">
-            </asp:ListItem><asp:ListItem Text="Laguna" Value="3">
-            </asp:ListItem><asp:ListItem Text="Dasmarinas" Value="4"></asp:ListItem></asp:DropDownList>
+           <asp:TextBox ID="txtMuni" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Municipality"></asp:TextBox>
             <br />
             <br />
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Photo</b></label>

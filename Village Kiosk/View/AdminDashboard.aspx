@@ -15,8 +15,8 @@
              ControlToValidate="txtname"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Full Name</b></label>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Invalid"  ForeColor = "Red" ControlToValidate="txtname" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Full Name</b></label><br />
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Please Input Valid Name"  ForeColor = "Red" ControlToValidate="txtname" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
           
           <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtname" ID="RegularExpressionValidator1" ValidationExpression = "^[\s\S]{0,40}$" runat="server" ForeColor = "Red" ErrorMessage="Maximum of 40 Characters Only"></asp:RegularExpressionValidator>
           <asp:TextBox ID="txtname" runat="server" AutoPostBack="true" 
@@ -54,12 +54,37 @@
           <asp:ListItem Text="In what town was your first job?" Value="5" />
           <asp:ListItem Text="What was the name of the company where you had your first job?" Value="6" />
           </asp:DropDownList>
+           <asp:RequiredFieldValidator 
+             id="RequiredFieldValidator5" runat="server" 
+             ErrorMessage="*" 
+             ControlToValidate="txtAnswer"
+             ForeColor = "Red">
+            </asp:RequiredFieldValidator>
           <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Answer</b></label>
           <asp:TextBox ID="txtAnswer" Enabled="false" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Please Enter Your Answer"></asp:TextBox>
 
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Password</b></label>
-          <asp:TextBox ID="txtPassword" runat="server" type="password" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Default Password (12345678)"></asp:TextBox>
+          
+            
+            
+            <asp:RequiredFieldValidator 
+             id="RequiredFieldValidator4" runat="server" 
+             ErrorMessage="*" 
+             ControlToValidate="txtRePassword"
+             ForeColor = "Red">
+            </asp:RequiredFieldValidator>
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Password</b></label><br />
+          <asp:TextBox ID="txtPassword" runat="server" type="password" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Password"></asp:TextBox>
          
+
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Re-enter Password</b></label><br />
+          <asp:CompareValidator ID="CompareValidator1" runat="server"
+            ControlToValidate="txtRePassword"
+            ControlToCompare="txtPassword"
+            ErrorMessage="Passwords do not match." 
+            Display="Dynamic"
+            ForeColor="Red"/>
+          <asp:TextBox ID="txtRePassword" runat="server" type="password" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "Re-enter Password"></asp:TextBox>
+          
           <asp:Button ID="btnAdmin" runat="server" Text="ADD" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding" OnClick="btnAdd_Click" Width="200px" style="background-color: white ; color: red;font-size: 15px; font-family: Trebuchet MS;" />
 
   </div>   

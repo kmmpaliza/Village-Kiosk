@@ -17,13 +17,12 @@
 <td>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
-<asp:Button ID="btnView" runat="server" Text="View" CssClass="w3-button  w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnView_Click" Width="250px"  Height="250px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+<asp:Button ID="btnView" runat="server" Text="VIEW" CssClass="w3-button  w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnView_Click" Width="250px"  Height="250px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
  </td>
  </tr>
  </table>
 
  <center>
-    <asp:ScriptManager ID = "ScriptManager1" runat="server"> </asp:ScriptManager>
              
              <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" 
                        PopupControlID="Panel1" CancelControlID="btnCancel" 

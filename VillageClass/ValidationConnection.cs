@@ -9,7 +9,7 @@ namespace VillageClass
     {
         public static string ConnectionString()
         {
-            return @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\chaelamorin\gc\Village Kiosk\App_Data\VillageDB.mdf;Integrated Security=True;User Instance=True";
+            return @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Maecea\Desktop\Thesis3ulit\gc\Village Kiosk\App_Data\VillageDB.mdf;Integrated Security=True;User Instance=True";
         }
     }
 }

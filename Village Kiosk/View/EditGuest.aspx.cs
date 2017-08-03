@@ -45,7 +45,7 @@ namespace Village_Kiosk.View
                 txtGuestMobile.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][3].ToString();
                 txtHouseNo.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][4].ToString();
                 txtBarangay.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][5].ToString();
-                drpMun.SelectedItem.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][6].ToString();
+                txtMuni.Text = guest.getGuest(guest.GuestId).Tables["getGuest"].Rows[0][6].ToString();
                
 
                 btnUpdateG.Enabled = true;
@@ -63,16 +63,7 @@ namespace Village_Kiosk.View
 
                     string gid = guestForId.Text;
                     guestname = txtGuestName.Text;
-
-                    string savepsv = drpMun.SelectedValue;
-                    if (drpMun.SelectedItem.Equals(savepsv))
-                    {
-                        muni = drpMun.SelectedValue;
-                    }
-                    else
-                    {
-                        muni = drpMun.SelectedItem.Text;
-                    }
+                    muni = txtMuni.Text;
                     guestcontact = txtGuestMobile.Text;
 
                     guest.updateGuest(gid, guestname, guestcontact, txtHouseNo.Text, txtBarangay.Text, muni, imagePath);

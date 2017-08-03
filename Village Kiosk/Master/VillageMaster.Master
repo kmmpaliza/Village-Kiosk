@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VillageMaster.master.cs" Inherits="Village_Kiosk.Master.VillageMaster" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -69,6 +71,8 @@
                         
                         <li>
                            <asp:LinkButton id="btnLogout" Text="Logout" OnClick="btnLogout_Click" runat="server"/>
+
+
                         </li>
                     </ul>
                 </li>
@@ -163,10 +167,33 @@
                 </div>
                 <!-- /.row -->
 
-               
-
             </div>
             <!-- /.container-fluid -->
+
+             <input id="logout" type="hidden" name="hddclick" runat="server" />
+                    <asp:ScriptManager ID = "Scp" runat="server"> </asp:ScriptManager>
+                   
+                    <asp:Panel ID="Panel1" runat="server" CssClass="modalBackground" Style="display: none; text-align: center; ">
+
+                    <div style="background-color:rgba(255, 255, 255, 0.85); color:black;padding:20px; margin-left:auto; margin-right:auto;">
+                    <i class="fa fa-warning" style="font-size:60px;color:Yellow"></i><asp:Label ID="lbl1" style="font-size:25px;color:Red; font-weight:bold"  runat ="server"> WARNING: THERE ARE GUEST THAT DID NOT LOGOUT </asp:Label><br />
+                    <br />
+                    <br />
+                    
+                      <center> <asp:Button ID="btnSub" runat="server" Text="Submit" OnClick="btnSubmit_Click" CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="300px"  />
+                      <br />
+                       <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass=" w3-button w3-block w3-hover-white w3-round-xlarge" style="background-color: #CC0808 ; color: white" Width="300px"  />
+ 
+                   </center>
+                    
+                    </div>
+                    </asp:Panel>
+                    
+
+                    <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" 
+                       PopupControlID="Panel1" CancelControlID="btnCancel" 
+                       TargetControlID="logout" BackgroundCssClass="modalBackground">
+             </asp:ModalPopupExtender>
 
         </div>
         <!-- /#page-wrapper -->
@@ -223,6 +250,20 @@
     function Capture() {
         webcam.capture();
         return false;
+    }
+</script>
+
+<script type="text/javascript" language="javascript">
+    window.history.forward(1);
+    document.attachEvent("onkeydown", my_onkeydown_handler);
+    function my_onkeydown_handler() {
+        switch (event.keyCode) {
+            case 116: // F5;
+                event.returnValue = false;
+                event.keyCode = 0;
+                window.status = "We have disabled F5";
+                break;
+        }
     }
 </script>
 

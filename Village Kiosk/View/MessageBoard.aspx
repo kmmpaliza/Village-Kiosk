@@ -27,8 +27,7 @@
 </pre>
 <center>
 
-               <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-               </asp:ToolkitScriptManager>
+        
                <asp:Panel ID="Panel1" runat="server" CssClass="modalBackground">
 
                <asp:GridView ID="grdMessageBoard" runat="server" BackColor="White" 

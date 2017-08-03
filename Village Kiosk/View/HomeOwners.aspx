@@ -15,7 +15,7 @@
              ControlToValidate="txtHomeOwnerName"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Homeowner's Name</b></label>
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Homeowner's Name</b></label><br />
           <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Please Input Valid Name"  ForeColor = "Red" ControlToValidate="txtHomeOwnerName" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
           
           <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtHomeOwnerName" ID="RegularExpressionValidator1" ValidationExpression = "^[\s\S]{0,40}$" runat="server" ForeColor = "Red" ErrorMessage="Maximum of 40 Characters Only"></asp:RegularExpressionValidator>
@@ -47,12 +47,12 @@
              ControlToValidate="txtHomeOwnerMobile"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Mobile Number</b></label>
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Mobile Number</b></label><br />
           
           <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  display = "Dynamic" ErrorMessage="Please Input Valid Number" ControlToValidate="txtHomeOwnerMobile" ValidationExpression="^09[0-9][0-9]{8}$" ForeColor = "Red"></asp:RegularExpressionValidator>
           
           <asp:TextBox ID="txtHomeOwnerMobile" runat="server" CssClass="w3-input w3-border w3-margin-bottom" style="text-align:center; border-color:#000080" Width="600px" placeholder = "09xxxxxxxxx"></asp:TextBox>
-           <asp:HyperLink ID="lnkTwilio" runat="server" NavigateUrl="https://www.twilio.com/login?g=%2Fconsole&t=269b703bb7bfd748412c1252bff6e4fc26321203dc2ea1a50ed8c44644980a24" Text="Twilio Console" Target="_blank"></asp:HyperLink>
+           <asp:HyperLink ID="lnkTwilio" runat="server" Font-Size="18px" NavigateUrl="https://www.twilio.com/login?g=%2Fconsole&t=269b703bb7bfd748412c1252bff6e4fc26321203dc2ea1a50ed8c44644980a24" Text="Twilio Console" Target="_blank"></asp:HyperLink>
 
            <br />
           <asp:Button ID="btnADDHO" runat="server" Text="ADD" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding" OnClick="btnAdd_Click" Width="200px" style="background-color: white ; color: red ;font-size: 15px; font-family: Trebuchet MS; font-weight: bold"/>

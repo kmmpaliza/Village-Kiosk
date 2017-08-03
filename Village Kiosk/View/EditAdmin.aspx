@@ -15,9 +15,11 @@
              ControlToValidate="txtname"
              ForeColor = "Red">
             </asp:RequiredFieldValidator>
-          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Full Name</b></label>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Invalid"  ForeColor = "Red" ControlToValidate="txtname" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
+          <label style="color: #ffffff; font-size: 20px; font-family: Trebuchet MS; font-weight:bold"><b>Full Name</b></label><br />
+         <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" display = "Dynamic" ErrorMessage="Please Input Valid Name"  ForeColor = "Red" ControlToValidate="txtname" ValidationExpression="[a-zA-Z ]*$"></asp:RegularExpressionValidator>
           
+          <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtname" ID="RegularExpressionValidator2" ValidationExpression = "^[\s\S]{0,40}$" runat="server" ForeColor = "Red" ErrorMessage="Maximum of 40 Characters Only"></asp:RegularExpressionValidator>
+
           <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtname" ID="RegularExpressionValidator1" ValidationExpression = "^[\s\S]{0,40}$" runat="server" ForeColor = "Red" ErrorMessage="Maximum of 40 Characters Only"></asp:RegularExpressionValidator>
           <asp:TextBox ID="txtname" runat="server" AutoPostBack="true" 
               CssClass="w3-input w3-border w3-margin-bottom" 

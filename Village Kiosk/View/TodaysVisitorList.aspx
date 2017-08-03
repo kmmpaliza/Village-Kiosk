@@ -24,7 +24,7 @@
           style="background-color: white ; color: red; font-size: 15px; font-family: Trebuchet MS;" >
      
        
-       <RowStyle HorizontalAlign="Center" Height = "40px" />
+       <RowStyle HorizontalAlign="Center" Height = "50px" Width="50px" />
 
         <Columns>
             <asp:CommandField ShowEditButton="True" ButtonType="Button" EditText= "Log Out"/>
