@@ -18,7 +18,7 @@ public partial class _Default : System.Web.UI.Page
                 using (StreamReader reader = new StreamReader(Request.InputStream))
                 {
                     string hexString = Server.UrlEncode(reader.ReadToEnd());
-                    string imageName = DateTime.Now.ToString("dd-MM-yy hh-mm-ss");
+                    string imageName = DateTime.Now.ToString("dd-MM-yy hh-mm");
                     string imagePath = string.Format("~/Captures/{0}.png", imageName);
                     File.WriteAllBytes(Server.MapPath(imagePath), ConvertHexToBytes(hexString));
                     Session["CapturedImage"] = ResolveUrl(imagePath);
