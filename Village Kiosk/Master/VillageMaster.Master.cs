@@ -50,6 +50,10 @@ namespace Village_Kiosk.Master
             {
                 Five.Attributes.Add("class", "active");
             }
+             else if (activepage.Contains("HomePage.aspx"))
+            {
+                Home.Attributes.Add("class", "active");
+            }
             
         }
         protected void btnLogout_Click(object sender, EventArgs e)

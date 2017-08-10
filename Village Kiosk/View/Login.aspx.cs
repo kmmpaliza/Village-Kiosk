@@ -30,7 +30,7 @@ namespace Village_Kiosk.View
             if (login.CheckUser(txtUsername.Text, txtPassword.Text))
             {
                 login.insertLogin(txtUsername.Text, DateTime.Now.ToString(), "");
-                Response.Redirect("OptionsHomeOwner.aspx");
+                Response.Redirect("HomePage.aspx");
             }
             else
             {
