@@ -4,8 +4,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
  <br />
  <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-envelope"></i></font> MESSAGE BOARD</h3>
- <hr style="color: #FAFAD2; border-width: 5.5px; width: 770px; border-style:outset;"/>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-envelope"></i></font><font size="10px"> MESSAGE BOARD</h3></font>
+ <hr style="color: #FAFAD2; border-width: 5.5px; width: 700px; border-style:outset;"/>
 <pre style ="width:650px">
 
 <asp:Label ID="Label1" runat="server">Send to:</asp:Label>

@@ -5,9 +5,9 @@
 
 <br />
    <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-search"></i></font> SEARCH</h3>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-search"></i></font><font size="10px"> SEARCH</h3></font>
 
- <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
+ <hr style="color: #FAFAD2; border-width: 5.5px; width: 855px; border-style:outset;"/>
  <br />
  <br />
  <br />

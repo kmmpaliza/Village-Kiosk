@@ -1,23 +1,25 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="OptionAdmin.aspx.cs" Inherits="Village_Kiosk.View.OptionAdmin" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+<br />
+<br />
 <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-user"></i></font> ADMIN</h3>
- 
- <hr style="color: #FAFAD2; border-width: 5.5px; width: 650px; border-style:outset;"/>
+
+<asp:Image ID="ImageButton1" runat="server" ImageUrl="~/Images/lblA.png" />
  <br />
  <br />
  <br />
  <table>
     <tr>
 <td>
-<asp:Button ID="btnNew" runat="server" Text="NEW" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnNew_Click" Width="250px" Height="250px"  style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+<asp:ImageButton ID="btnNew" runat="server" ImageUrl="~/Images/btnNewHO.png"   OnClick="btnNew_Click" CssClass="w3-button  w3-hover-black w3-round-xlarge w3-section w3-padding box-shadow" style="background-color: #920000 ; color: White; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
 </td>
 <td>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<asp:ImageButton ID="btnView" runat="server" ImageUrl="~/Images/btnView.png"   OnClick="btnView_Click" CssClass="w3-button  w3-hover-black w3-round-xlarge w3-section w3-padding box-shadow" style="background-color: #920000 ; color: White; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
 
-<asp:Button ID="btnView" runat="server" Text="VIEW" CssClass="w3-button  w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnView_Click" Width="250px"  Height="250px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
  </td>
  </tr>
  </table>

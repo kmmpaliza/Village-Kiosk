@@ -2,18 +2,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
 
-<div class="slideshow-container " align="center">
-
+<div class="slideshow-container ">
+<div align="center">
+<asp:Image ID="ImageButton1" runat="server" ImageUrl="~/Images/lblWelcome.png" />
+<br />
+<br />
 <div class="mySlides ">
-  <img src="../Uploads/Chrysanthemum.jpg" style="width:70%">
+  <img src="../Uploads/pic1.jpg" style="width:70%">
 </div>
 
 <div class="mySlides ">
-  <img src="../Uploads/Tulips.jpg" style="width:70%">
+  <img src="../Uploads/pic2.jpg" style="width:70%">
 </div>
 
 <div class="mySlides ">
-  <img src="../Uploads/Penguins.jpg" style="width:70%">
+  <img src="../Uploads/pic3.jpg" style="width:70%">
 </div>
 
 
@@ -24,6 +27,7 @@
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
+</div>
 </div>
 
 </asp:Content>

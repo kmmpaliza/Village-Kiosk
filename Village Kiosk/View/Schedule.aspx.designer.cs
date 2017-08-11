@@ -13,6 +13,15 @@ namespace Village_Kiosk.View {
     public partial class Schedule {
         
         /// <summary>
+        /// ImageButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageButton1;
+        
+        /// <summary>
         /// signup control.
         /// </summary>
         /// <remarks>
@@ -100,7 +109,7 @@ namespace Village_Kiosk.View {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.ImageButton Button1;
         
         /// <summary>
         /// Calendar1 control.

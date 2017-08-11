@@ -13,48 +13,48 @@ namespace Village_Kiosk.View {
     public partial class OptionsGuest {
         
         /// <summary>
-        /// txtEvent control.
+        /// ImageButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEvent;
+        protected global::System.Web.UI.WebControls.Image ImageButton1;
         
         /// <summary>
-        /// txtDate control.
+        /// btnLogIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDate;
+        protected global::System.Web.UI.WebControls.ImageButton btnLogIn;
         
         /// <summary>
-        /// txtEventDescription control.
+        /// btnNewGuest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEventDescription;
+        protected global::System.Web.UI.WebControls.ImageButton btnNewGuest;
         
         /// <summary>
-        /// cmdCreate control.
+        /// btnToday control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cmdCreate;
+        protected global::System.Web.UI.WebControls.ImageButton btnToday;
         
         /// <summary>
-        /// Calendar1 control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.ImageButton btnSearch;
     }
 }

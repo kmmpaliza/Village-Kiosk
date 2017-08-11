@@ -1,41 +1,46 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="OptionsGuest.aspx.cs" Inherits="Village_Kiosk.View.OptionsGuest" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
    <br />
+   <br />
    <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-male"></i></font> GUESTS</h3>
-
- <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
+<asp:Image ID="ImageButton1" runat="server" ImageUrl="~/Images/lblG.png" />
  <br />
  <br />
  <br />
  <table>
     <tr>
+    <td>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+</td>
 <td>
-<asp:Button ID="btnLogIn" runat="server" Text="LOG IN" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnLoginG_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+<asp:ImageButton ID="btnLogIn" runat="server" ImageUrl="~/Images/btnloginG.png"  CssClass="w3-button  w3-hover-black w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnLoginG_Click"  style="background-color: #920000 ; color: White; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+</td>
+
+<td>
+&nbsp&nbsp&nbsp&nbsp
+</td>
+<td>
+<asp:ImageButton ID="btnNewGuest" runat="server" ImageUrl="~/Images/btnnewHO.png"  CssClass="w3-button  w3-hover-black w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnNewG_Click"  style="background-color: #920000 ; color: White; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
 </td>
 <td>
 &nbsp&nbsp&nbsp&nbsp
 </td>
 <td>
-<asp:Button ID="btnNewGuest" runat="server" Text="NEW" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnNewG_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
-</td>
-<td>
-&nbsp&nbsp&nbsp&nbsp
-</td>
-<td>
-<asp:Button ID="btnToday" runat="server" Text="VISITOR/S" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnToday_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+<asp:ImageButton ID="btnToday" runat="server" ImageUrl="~/Images/btnvisitorG.png"  CssClass="w3-button  w3-hover-black w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnToday_Click"  style="background-color: #920000 ; color: White; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+
 </td>
 <td>
 &nbsp&nbsp&nbsp&nbsp
 </td>
 
 <td>
-<asp:Button ID="btnSearch" runat="server" Text="SEARCH" CssClass="w3-button w3-block w3-hover-khaki w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnSearch_Click" Width="230px" Height="230px" style="background-color: #ffffff ; color: #920000; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+<asp:ImageButton ID="btnSearch" runat="server" ImageUrl="~/Images/btnsearchHO.png"  CssClass="w3-button  w3-hover-black w3-round-xlarge w3-section w3-padding box-shadow" OnClick="btnSearch_Click"  style="background-color: #920000 ; color: White; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
+
 </td>
 <td>
 &nbsp&nbsp&nbsp&nbsp
 </td>
 
 
-</tr>
+</tr></table></div>
 </asp:Content>

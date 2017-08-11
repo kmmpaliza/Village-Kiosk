@@ -1,13 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/VillageMaster.Master" AutoEventWireup="true" CodeBehind="Schedule.aspx.cs" Inherits="Village_Kiosk.View.Schedule" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
-<br />
-  
    <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-calendar"></i></font> SCHEDULE</h3>
-
- <hr style="color: #FAFAD2; border-width: 5.5px; width: 695px; border-style:outset;"/>
-
+   <asp:Image ID="ImageButton1" runat="server" ImageUrl="~/Images/lblS.png" />
+ <br />
  <div runat="server" id="signup" Visible="false">
  <asp:RequiredFieldValidator 
              id="RequiredFieldValidator1" runat="server" 
@@ -48,6 +44,7 @@
  <table>
  <tr>
  <td>
+ 
  <asp:Button ID="cmdCreate" runat="server" Text="Add Event" 
         onclick="cmdCreate_Click" CssClass=" w3-button w3-block w3-hover-khaki w3-round-xlarge" ValidationGroup="Group1" style="background-color: #CC0808 ; color: white;font-size: 15px; font-family: Trebuchet MS;" Width="140px" />
   </td>
@@ -55,6 +52,7 @@
   &nbsp&nbsp
   </td>
   <td>
+  
 <asp:Button ID="Button2" runat="server" Text="Done" 
         onclick="done" CssClass=" w3-button w3-block w3-hover-khaki w3-round-xlarge"  style="background-color: #CC0808 ; color: white;font-size: 15px; font-family: Trebuchet MS;" Width="140px" />
      </td> 
@@ -63,8 +61,8 @@
       
  </div>
 
- <asp:Button ID="Button1" runat="server" Text="Create Event" 
-        onclick="createEvent" CssClass=" w3-button w3-block w3-hover-khaki w3-round-xlarge"  style="background-color: #CC0808 ; color: white;font-size: 15px; font-family: Trebuchet MS;" Width="170px" />
+ 
+      <asp:ImageButton ID="Button1" runat="server" ImageUrl="~/Images/btnCreateEvent.png"   OnClick="createEvent" CssClass="w3-button  w3-hover-black w3-round-xlarge w3-section w3-padding box-shadow" style="background-color: #920000 ; color: White; font-size: 30px; font-family: Trebuchet MS; font-weight:bold"/>
       <br />
 
  

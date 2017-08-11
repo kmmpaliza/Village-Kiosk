@@ -13,13 +13,22 @@ namespace Village_Kiosk.View {
     public partial class OptionsMessage {
         
         /// <summary>
+        /// ImageButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageButton1;
+        
+        /// <summary>
         /// btnMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMsg;
+        protected global::System.Web.UI.WebControls.ImageButton btnMsg;
         
         /// <summary>
         /// btnMsgAll control.
@@ -28,7 +37,7 @@ namespace Village_Kiosk.View {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMsgAll;
+        protected global::System.Web.UI.WebControls.ImageButton btnMsgAll;
         
         /// <summary>
         /// btnSent control.
@@ -37,6 +46,6 @@ namespace Village_Kiosk.View {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSent;
+        protected global::System.Web.UI.WebControls.ImageButton btnSent;
     }
 }

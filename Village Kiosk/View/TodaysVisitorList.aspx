@@ -3,7 +3,7 @@
 <br />
     
  <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-male"></i></font> TODAY'S VISITOR/S</h3>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-male"></i></font><font size="10px"> TODAY'S VISITOR/S</h3></font>
  
  <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
  <br />

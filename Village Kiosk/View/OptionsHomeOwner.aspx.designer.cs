@@ -13,13 +13,22 @@ namespace Village_Kiosk.View {
     public partial class OptionsHomeOwner {
         
         /// <summary>
+        /// ImageButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageButton1;
+        
+        /// <summary>
         /// btnNewHO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewHO;
+        protected global::System.Web.UI.WebControls.ImageButton btnNewHO;
         
         /// <summary>
         /// btnSearchHO control.
@@ -28,6 +37,6 @@ namespace Village_Kiosk.View {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearchHO;
+        protected global::System.Web.UI.WebControls.ImageButton btnSearchHO;
     }
 }

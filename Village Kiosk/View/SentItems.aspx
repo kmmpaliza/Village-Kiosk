@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 <br />
  <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-envelope"></i></font> SENT ITEMS</h3>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-envelope"></i></font><font size="10px"> SENT ITEMS</h3></font>
  <hr style="color: #FAFAD2; border-width: 5.5px; width: 850px; border-style:outset;"/>
     <div align="center">
 

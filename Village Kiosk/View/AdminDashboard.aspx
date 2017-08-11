@@ -3,8 +3,8 @@
  
  <br />
  <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-user"></i></font> NEW ADMIN</h3>
- <hr style="color: #FAFAD2; border-width: 5.5px; width: 770px; border-style:outset;"/>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-user"></i></font><font size="10px"> NEW ADMIN</h3></font>
+ <hr style="color: #FAFAD2; border-width: 5.5px; width: 680px; border-style:outset;"/>
     
     <div align="center">
 

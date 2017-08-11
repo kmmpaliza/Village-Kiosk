@@ -3,9 +3,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
  <div align="center">
- <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-home"></i></font> HOME OWNERS</h3>
+ <h3 style="color: #ffffff; font-size:65px"><font color= "#D4AF37"><i class="fa fa-home"></i></font><font size="10px"> HOME OWNERS</h3></font>
 
- <hr style="color: #FAFAD2; border-width: 5.5px;width: 850px; border-style:outset;"/>
+ <hr style="color: #FAFAD2; border-width: 5.5px;width: 680px; border-style:outset;"/>
  <br />
  
           <asp:Label id="forID" runat="server" Visible="False"></asp:Label>

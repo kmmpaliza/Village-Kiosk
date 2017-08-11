@@ -26,3 +26,4 @@ C:\Users\Maecea\Desktop\Thesis3ulit\gc\VillageClass\bin\Debug\VillageClass.dll
 C:\Users\Maecea\Desktop\Thesis3ulit\gc\VillageClass\bin\Debug\VillageClass.pdb
 C:\Users\Maecea\Desktop\Thesis3ulit\gc\VillageClass\obj\Debug\VillageClass.dll
 C:\Users\Maecea\Desktop\Thesis3ulit\gc\VillageClass\obj\Debug\VillageClass.pdb
+C:\Users\chaelamorin\gc\VillageClass\obj\Debug\VillageClass.csprojResolveAssemblyReference.cache
